@@ -3,5 +3,6 @@ class Ingredient < ActiveRecord::Base
   
   has_and_belongs_to_many :dishes
   has_and_belongs_to_many :dishpics
+  validates :name, presence: true
   
 end
