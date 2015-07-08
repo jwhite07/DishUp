@@ -48,7 +48,6 @@ gem 'devise'
 gem 'cancan'
 gem 'country_select'
 
-gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
