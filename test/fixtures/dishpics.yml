@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dish_id: 
+  favorites: 
+  user_id: 
+  flagged: 
+  remove: 
+  caption: 
+  quality_score: 9.99
+
+two:
+  dish_id: 
+  favorites: 
+  user_id: 
+  flagged: 
+  remove: 
+  caption: 
+  quality_score: 9.99

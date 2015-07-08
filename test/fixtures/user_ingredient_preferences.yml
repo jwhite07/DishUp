@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id_id: 
+  ingredient_id_id: 
+  like: false
+  dislike: false
+
+two:
+  user_id_id: 
+  ingredient_id_id: 
+  like: false
+  dislike: false

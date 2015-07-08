@@ -1,0 +1,5 @@
+class Menu < ActiveRecord::Base
+  belongs_to :restaurant
+  has_many :dishes
+  has_many :dishpics, through: :dishes
+end
