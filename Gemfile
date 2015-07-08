@@ -43,3 +43,14 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'cancan'
+gem 'country_select'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'pg'
