@@ -1,5 +1,6 @@
 ActiveAdmin.register Menu do
-
+  belongs_to :restaurant
+  navigation_menu :restaurant
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #

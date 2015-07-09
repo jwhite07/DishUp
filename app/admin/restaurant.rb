@@ -1,7 +1,5 @@
-ActiveAdmin.register Dishpic do
-  belongs_to :user
-  belongs_to :dish
-  
+ActiveAdmin.register Restaurant do
+  permit_params :name, :address, :city, :state, :country, :postal_code, :logo, :premium_level
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
