@@ -1,10 +1,12 @@
 class Dish < ActiveRecord::Base
-  belongs_to :menu
-  has_many :ingredients
-  has_and_belongs_to_many :dish_types
-  has_and_belongs_to_many :ingredients
+  has_many :dish_types_menus
+  has_many :dish_types, :through => :dish_types_menus
+  has_many :dishes_ingredients
+  has_many :dishes_menus
+  has_many :menus, :through => :dishes_menus
+  has_many :ingredients, :through => :dishes_ingredients
   
-  validates :name, :menu_id, :rating, presence: true
+  validates :name,  :rating, presence: true
   validates :rating, numericality: {
     greater_than_or_equal_to: 0, 
     less_than_or_equal_to: 5

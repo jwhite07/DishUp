@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :dishpics
   has_many :user_ingredient_preferences
+  has_many :ingredients, :through => :user_ingredient_preferences
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

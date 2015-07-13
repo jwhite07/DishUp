@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150709123746) do
+ActiveRecord::Schema.define(version: 20150712122528) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -55,13 +55,24 @@ ActiveRecord::Schema.define(version: 20150709123746) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   add_index "admin_users", ["unlock_token"], name: "index_admin_users_on_unlock_token", unique: true
 
-  create_table "dish_ingredients", force: :cascade do |t|
-    t.integer "dish_id"
-    t.integer "ingredient_id"
+  create_table "diet_claims", force: :cascade do |t|
+    t.integer  "diet_type_id"
+    t.integer  "dish_id"
+    t.string   "notes"
+    t.string   "claim_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  add_index "dish_ingredients", ["dish_id"], name: "index_dish_ingredients_on_dish_id"
-  add_index "dish_ingredients", ["ingredient_id"], name: "index_dish_ingredients_on_ingredient_id"
+  add_index "diet_claims", ["diet_type_id"], name: "index_diet_claims_on_diet_type_id"
+  add_index "diet_claims", ["dish_id"], name: "index_diet_claims_on_dish_id"
+
+  create_table "diet_types", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "dish_types", force: :cascade do |t|
     t.string   "name"
@@ -88,13 +99,21 @@ ActiveRecord::Schema.define(version: 20150709123746) do
   add_index "dishes_dish_types", ["dish_id"], name: "index_dishes_dish_types_on_dish_id"
   add_index "dishes_dish_types", ["dish_type_id"], name: "index_dishes_dish_types_on_dish_type_id"
 
-  create_table "dishpic_ingredients", force: :cascade do |t|
-    t.integer "dishpic_id"
+  create_table "dishes_ingredients", force: :cascade do |t|
+    t.integer "dish_id"
     t.integer "ingredient_id"
   end
 
-  add_index "dishpic_ingredients", ["dishpic_id"], name: "index_dishpic_ingredients_on_dishpic_id"
-  add_index "dishpic_ingredients", ["ingredient_id"], name: "index_dishpic_ingredients_on_ingredient_id"
+  add_index "dishes_ingredients", ["dish_id"], name: "index_dishes_ingredients_on_dish_id"
+  add_index "dishes_ingredients", ["ingredient_id"], name: "index_dishes_ingredients_on_ingredient_id"
+
+  create_table "dishes_menus", force: :cascade do |t|
+    t.integer "dish_id"
+    t.integer "menu_id"
+  end
+
+  add_index "dishes_menus", ["dish_id"], name: "index_dishes_menus_on_dish_id"
+  add_index "dishes_menus", ["menu_id"], name: "index_dishes_menus_on_menu_id"
 
   create_table "dishpics", force: :cascade do |t|
     t.integer  "dish_id"
@@ -108,6 +127,14 @@ ActiveRecord::Schema.define(version: 20150709123746) do
     t.datetime "updated_at",    null: false
     t.string   "url"
   end
+
+  create_table "dishpics_ingredients", force: :cascade do |t|
+    t.integer "dishpic_id"
+    t.integer "ingredient_id"
+  end
+
+  add_index "dishpics_ingredients", ["dishpic_id"], name: "index_dishpics_ingredients_on_dishpic_id"
+  add_index "dishpics_ingredients", ["ingredient_id"], name: "index_dishpics_ingredients_on_ingredient_id"
 
   create_table "ingredients", force: :cascade do |t|
     t.string   "name"

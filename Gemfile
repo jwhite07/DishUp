@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #admin gems
 gem 'activeadmin', github: 'activeadmin'
 gem 'country_select'
+gem 'best_in_place', github: 'bernat/best_in_place'
 
 #auth gems
 gem 'devise'
@@ -55,11 +56,12 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'sqlite3'
+  gem 'ffaker'
 end
 group :test do
   gem "rspec-rails", "~> 3.3"
   gem "factory_girl_rails"
-  gem 'ffaker'
+  
   gem "shoulda-matchers"
   
 

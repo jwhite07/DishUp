@@ -12,6 +12,5 @@ ActiveAdmin.register Ingredient do
 #   permitted << :other if resource.something?
 #   permitted
 # end
-permit_params :name, :description
 
 end
