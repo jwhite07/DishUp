@@ -59,10 +59,11 @@ group :development, :test do
   gem 'ffaker', '2.1.0',
     :path => "vendor/ffaker-2.1.0",
     :require => 'ffaker'
+  gem "factory_girl_rails"
 end
 group :test do
   gem "rspec-rails", "~> 3.3"
-  gem "factory_girl_rails"
+  
   
   gem "shoulda-matchers"
   
