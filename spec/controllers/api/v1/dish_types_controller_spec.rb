@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Api::V1::DishTypesController, type: :controller do
+  #render_views
   describe "GET #index" do
     before(:each) do
       types = ["Burgers", "Pasta", "Seafood", "Steak"]

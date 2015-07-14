@@ -16,7 +16,8 @@ describe Api::V1::SessionsController do
 
       it "returns the user record corresponding to the given credentials" do
         @user.reload
-        expect(json_response[:auth_token]).to eql @user.auth_token
+        session_response = json_response[:user]
+        expect(session_response[:auth_token]).to eql @user.auth_token
       end
 
       it { should respond_with 200 }
@@ -30,6 +31,7 @@ describe Api::V1::SessionsController do
       end
 
       it "returns a json with an error" do
+        
         expect(json_response[:errors]).to eql "Invalid email or password"
       end
 
