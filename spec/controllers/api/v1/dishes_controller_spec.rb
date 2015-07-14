@@ -1,18 +1,19 @@
 require 'spec_helper'
 
 RSpec.describe Api::V1::DishesController, type: :controller do
-  describe "GET #index" do
+  describe "dish_type/n/dishes GET #index" do
     before(:each) do
-      types = ["BBQ Burger", "Pasta", "Seafood", "Steak"]
-      types.each do |t|
-        FactoryGirl.create :dish_type, name: t
+      dish_types = []
+      4.times do 
+        dish_types << FactoryGirl.create(:dish_type_with_dishes)
       end
-      get :index
+      get :index, {:dish_type_id => dish_types[rand(0...3)].id}
     end
-    it "returns 4 dish_types from the database" do
-      dish_types_response = json_response
-      expect(dish_types_response[:dish_types].length).to eq(4)
+    it "returns 5 dishes from the database" do
+      dishes_response = json_response
+      expect(dishes_response[:dishes].length).to eq(5)
     end
     it {should respond_with 200}
   end
+  
 end

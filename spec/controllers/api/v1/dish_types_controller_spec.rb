@@ -4,9 +4,8 @@ RSpec.describe Api::V1::DishTypesController, type: :controller do
   #render_views
   describe "GET #index" do
     before(:each) do
-      types = ["Burgers", "Pasta", "Seafood", "Steak"]
-      types.each do |t|
-        FactoryGirl.create :dish_type, name: t
+      4.times do 
+        FactoryGirl.create :dish_type
       end
       get :index
     end

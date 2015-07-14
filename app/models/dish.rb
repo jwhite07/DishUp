@@ -1,9 +1,11 @@
 class Dish < ActiveRecord::Base
-  has_many :dish_types_menus
-  has_many :dish_types, :through => :dish_types_menus
-  has_many :dishes_ingredients
+  has_many :dishes_dish_types
+  has_many :dish_types, :through => :dishes_dish_types
+  
   has_many :dishes_menus
   has_many :menus, :through => :dishes_menus
+  
+  has_many :dishes_ingredients
   has_many :ingredients, :through => :dishes_ingredients
   
   validates :name,  :rating, presence: true
