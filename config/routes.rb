@@ -12,7 +12,9 @@ Rails.application.routes.draw do
       end
       resources :dishes, :only => [:index, :show, :update, :destroy, :create] do
         resources :dishpics, :only => [:index]
+        resources :dish_ratings, :only => [:create]
       end
+      resources :dish_ratings, :only => [:update]
     end
   end
 end

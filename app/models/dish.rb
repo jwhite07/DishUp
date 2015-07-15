@@ -10,6 +10,8 @@ class Dish < ActiveRecord::Base
   
   has_many :dishpics
   
+  has_many :dish_ratings
+  
   validates :name,  :rating, presence: true
   validates :rating, numericality: {
     greater_than_or_equal_to: 0, 
