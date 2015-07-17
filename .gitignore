@@ -15,4 +15,4 @@
 /log/*
 !/log/.keep
 /tmp
-/vendor/ffaker-2.1.0
+#/vendor/ffaker-2.1.0
