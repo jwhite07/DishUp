@@ -10,11 +10,18 @@ Rails.application.routes.draw do
       resources :dish_types, :only => [:index, :show] do
         resources :dishes, :only => [:index]
       end
+      
       resources :dishes, :only => [:index, :show, :update, :destroy, :create] do
         resources :dishpics, :only => [:index]
         resources :dish_ratings, :only => [:create]
       end
       resources :dish_ratings, :only => [:update]
+      
+      resources :dishpics, :only => [:index, :show] do
+        resources :dishpic_quality_ratings, :only => [:create]
+      end
+      resources :dishpic_quality_ratings, :only => [:update]
+      
     end
   end
 end

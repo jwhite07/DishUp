@@ -13,7 +13,7 @@ RSpec.describe Api::V1::DishpicQualityRatingsController, type: :controller do
     end
     it "renders the json representation of the dishpic with new rating score" do
       dishpic_response = json_response[:dishpic]
-      expect(dish_response[:id]).to eql @dishpic[:id]
+      expect(dishpic_response[:id]).to eql @dishpic[:id]
     end
     it {should respond_with 201}
   end
@@ -21,7 +21,7 @@ RSpec.describe Api::V1::DishpicQualityRatingsController, type: :controller do
     before(:each) do
       @dishpic_quality_rating = FactoryGirl.create :dishpic_quality_rating
       @user = @dishpic_quality_rating.user
-      @dishpic = @dishpic_quality_rating.dish
+      @dishpic = @dishpic_quality_rating.dishpic
       api_authorization_header @user.auth_token
       
       put :update,  {id: @dishpic_quality_rating.id, 
@@ -30,7 +30,7 @@ RSpec.describe Api::V1::DishpicQualityRatingsController, type: :controller do
     end
     it "renders the json representation of the dish with new rating score" do
       dishpic_response = json_response[:dishpic]
-      expect(dish_response[:id]).to eql @dishpic[:id]
+      expect(dishpic_response[:id]).to eql @dishpic[:id]
     end
     it {should respond_with 200}
   end

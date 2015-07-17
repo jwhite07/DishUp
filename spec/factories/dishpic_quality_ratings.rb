@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :dishpic_quality_rating, :class => 'DishpicQualityRatings' do
+  factory :dishpic_quality_rating, :class => 'DishpicQualityRating' do
     
         user
         dishpic
