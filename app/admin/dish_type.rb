@@ -12,7 +12,7 @@ ActiveAdmin.register DishType do
 #   permitted << :other if resource.something?
 #   permitted
 # end
-  permit_params :name, :description
+  permit_params :name, :description, :icon_url
 
 
 end
