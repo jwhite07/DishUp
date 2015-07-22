@@ -1,4 +1,6 @@
 class Dish < ActiveRecord::Base
+  belongs_to :restaurant
+  
   has_many :dishes_dish_types
   has_many :dish_types, :through => :dishes_dish_types
   

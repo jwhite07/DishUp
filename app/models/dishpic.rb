@@ -1,8 +1,8 @@
 class Dishpic < ActiveRecord::Base
   belongs_to :dish
   belongs_to :user
-  has_many :dishpic_ingredients
-  has_many :ingredients, :through => :dishpic_ingredients
+  has_many :dishpics_ingredients
+  has_many :ingredients, :through => :dishpics_ingredients
   has_many :dishpic_quality_ratings
   
   validates :url, presence: true

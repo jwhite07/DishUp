@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714202049) do
+ActiveRecord::Schema.define(version: 20150722205256) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -88,9 +88,12 @@ ActiveRecord::Schema.define(version: 20150714202049) do
     t.integer  "menu_id"
     t.decimal  "rating"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "restaurant_id"
   end
+
+  add_index "dishes", ["restaurant_id"], name: "index_dishes_on_restaurant_id"
 
   create_table "dishes_dish_types", force: :cascade do |t|
     t.integer "dish_id"
@@ -180,6 +183,9 @@ ActiveRecord::Schema.define(version: 20150714202049) do
     t.string   "premium_level"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "phone_number"
+    t.string   "website"
+    t.string   "hours"
   end
 
   create_table "user_ingredient_preferences", force: :cascade do |t|
