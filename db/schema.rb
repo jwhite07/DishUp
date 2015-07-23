@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723003704) do
+ActiveRecord::Schema.define(version: 20150723161021) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -123,12 +123,12 @@ ActiveRecord::Schema.define(version: 20150723003704) do
     t.integer  "dish_id"
     t.integer  "favorites",     default: 0
     t.integer  "user_id"
-    t.boolean  "flagged"
-    t.boolean  "remove"
+    t.boolean  "flagged",       default: false
+    t.boolean  "remove",        default: false
     t.text     "caption"
     t.decimal  "quality_score", default: 0.0
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.string   "url"
   end
 

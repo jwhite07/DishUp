@@ -14,8 +14,11 @@ ActiveAdmin.register Dish do
       end
     end
     panel "DishPics" do
-      table_for dish.dishpics do
-        column :url 
+      table_for dish.dishpics do 
+        column :url do |d|
+          image_tag d.url
+        end
+        
         column :user
         column :caption
 

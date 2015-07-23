@@ -10,5 +10,6 @@ class Dishpic < ActiveRecord::Base
     greater_than_or_equal_to: 0, 
     less_than_or_equal_to: 5
   }
+  default_scope {order('quality_score DESC')}
   
 end

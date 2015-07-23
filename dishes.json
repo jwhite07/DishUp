@@ -1,0 +1,1892 @@
+[
+    {
+        "gluten free": "yes",
+        "id": "1",
+        "meal type": "main",
+        "menu description": "Pork butt, smoked slow and pulled, bathed in sauce and topped with our signature coleslaw and dill pickle strips.",
+        "name": "The Reason",
+        "price": "$8.49",
+        "restaurant": "Slows Bar B Q",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "2",
+        "meal type": "main",
+        "menu description": "Smoked chicken, pulled apart and tossed in Yardbird sauce with saut\u00e9ed mushrooms and cheddar cheese, and topped with applewood bacon. All Sandwiches served on Zingerman\u2019s Toast or Poppy Seed Roll.",
+        "name": "The Yardbird",
+        "price": "$9.99",
+        "restaurant": "Slows Bar B Q",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "3",
+        "meal type": "main",
+        "menu description": "Applewood bacon, pulled pork and ham stacked high and mighty.",
+        "name": "Triple Threat Pork Sandwich",
+        "price": "$9.99",
+        "restaurant": "Slows Bar B Q",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "4",
+        "meal type": "main",
+        "menu description": "Crispy top layer, medium shells, cheddar cheese, salt and pepper, and a dash of cayenne, as well as spices, served in 8-ounce portions as a side, or in a 15-ounce portion as an entree.",
+        "name": "Mac-N-Cheese",
+        "price": "$3.00",
+        "restaurant": "Slows Bar B Q",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "5",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Waffle Fries",
+        "price": "$3.00",
+        "restaurant": "Slows Bar B Q",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "6",
+        "meal type": "main",
+        "menu description": "Half-pound Vinsetta blend patty, Swiss, Woodshop MI maple bacon, topped with a fried cage-free egg & crispy fried onion strings, Sriracha mayo.",
+        "name": "The 3 A.M.",
+        "price": "$13.95",
+        "restaurant": "Vinsetta Garage",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "7",
+        "meal type": "main",
+        "menu description": "Vermont sharp cheddar, Pinconning, penne rigate, bechamel, parmesan, crunchy crust, served with or without smoked ham.",
+        "name": "Union Mac",
+        "price": "w/o Ham: $13.75; w/ Ham: $16",
+        "restaurant": "Vinsetta Garage",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "8",
+        "meal type": "dessert",
+        "menu description": "House-made liquid nitrogen churned Faygo Rock N' Rye ice cream dusted with Pop Rocks.",
+        "name": "Faygo Ice Cream",
+        "price": "$2.95",
+        "restaurant": "Vinsetta Garage",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "9",
+        "meal type": "main",
+        "menu description": "Winter\u2019s 901-L hot dog, house-made coney chili, chopped white onions, cheese blend, smoked cheddar, French\u2019s mustard.",
+        "name": "Sir Shakes' Coney Pie",
+        "price": "$12.95",
+        "restaurant": "Vinsetta Garage",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "10",
+        "meal type": "appetizer",
+        "menu description": "House-cut fries, Ellsworth cheese curds, whole grain mustard gravy, chili flakes, scallions",
+        "name": "Disco Fries",
+        "price": "$6.95",
+        "restaurant": "Vinsetta Garage",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "11",
+        "meal type": "main",
+        "menu description": "Half-pound Vinsetta blend beef patty, Woodshop MI maple bacon, pancetta, grilled Canadian bacon, house-made bacon jam, smoked cheddar",
+        "name": "Macon Bacon Burger",
+        "price": "$14.95",
+        "restaurant": "Vinsetta Garage",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "12",
+        "meal type": "main",
+        "menu description": "Smoked gouda, burnt onions, house toppings, and zip sauce.",
+        "name": "Piedmontese Burger",
+        "price": "",
+        "restaurant": "Redcoat Tavern",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "13",
+        "meal type": "appetizer",
+        "menu description": "",
+        "name": "Hand Battered Onion Rings",
+        "price": "$5.35",
+        "restaurant": "Redcoat Tavern",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "14",
+        "meal type": "main",
+        "menu description": "Bacon, swiss gruyere, caramelized onions, watercress, tomato, Dijon mustard.",
+        "name": "Brasserie Burger",
+        "price": "",
+        "restaurant": "Redcoat Tavern",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "15",
+        "meal type": "dessert",
+        "menu description": "Raspberry-pecan bread pudding with white chocolate sauce.",
+        "name": "Raspberry-pecan Bread Pudding",
+        "price": "$5.25",
+        "restaurant": "Redcoat Tavern",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "16",
+        "meal type": "soup and salad",
+        "menu description": "",
+        "name": "Our Famous Clam Chowder",
+        "price": "Pint: $6.50; Quart: $11.50",
+        "restaurant": "Redcoat Tavern",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "17",
+        "meal type": "main",
+        "menu description": "Atlantic salmon grilled on michigan cedar, served with vegetarian black beans & rice",
+        "name": "Cedar Planked Salmon",
+        "price": "$19.95",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "18",
+        "meal type": "main",
+        "menu description": "Vermont sharp cheddar, pinconning, penne rigate, bechamel, parmesan & crunchy crust",
+        "name": "Union Mac & Cheese",
+        "price": "$13.75",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "19",
+        "meal type": "main",
+        "menu description": "House ground pork patty, house made mi maple bacon, house made hot link, pickled chilies, woodshop cold smoked cheddar, south carolina mayo (served medium)",
+        "name": "The Porker",
+        "price": "$10.95",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "20",
+        "meal type": "main",
+        "menu description": "American catfish blackened in cast-iron & served with cajun remoulade & sides of black beans & rice.",
+        "name": "Blackened Catfish",
+        "price": "$11.50",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "21",
+        "meal type": "soup and salad",
+        "menu description": "Mixed greens, marinated tomatoes, garbanzo beans, feta, red wine vinaigrette.",
+        "name": "Coco House Salad",
+        "price": "Small: $3.95; Large $7.50",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "22",
+        "meal type": "main",
+        "menu description": "Quarter chicken choice of white or dark meat, choice of pulled pork or brisket, or house-made hot link, plus 2 bones of spare ribs or back ribs, served up with a corn muffin & whipped sweet butter",
+        "name": "Woodshop 101",
+        "price": "$20.95",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "23",
+        "meal type": "dessert",
+        "menu description": "Battered & deep fried with chocolate sauce.",
+        "name": "Deep Fried Twinkie",
+        "price": "$2.95",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "24",
+        "meal type": "main",
+        "menu description": "Fresh mozzarella, san marzano tomato sauce, marinated tomatoes, fresh basil.",
+        "name": "Margherita Pizza",
+        "price": "$9.95",
+        "restaurant": "Union Woodshop",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "25",
+        "meal type": "main",
+        "menu description": "Slow Roasted and Smoked Pork served with Sriracha BBQ sauce, house kimchi, and a Zingerman's Pretzel Bun.",
+        "name": "BBQ Pulled Pork",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "26",
+        "meal type": "",
+        "menu description": "Green Tomato and Brussel Sprouts.",
+        "name": "House Made Kimchis",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "27",
+        "meal type": "",
+        "menu description": "Topped with with candied pecans and marshmallows.",
+        "name": "Roasted Sweet Potatoes",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "28",
+        "meal type": "main",
+        "menu description": "Slow cooked & Michigan raised beef brisket topped with our house made green apple sauerkraut, Putin's special sauce, and Gouda cheese on Zingerman's onion rye.",
+        "name": "Putin's Reuben",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "29",
+        "meal type": "appetizer",
+        "menu description": "A light blend of edamame and tahini paired with some flat bread and veggies.",
+        "name": "Edamame Hummus",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "30",
+        "meal type": "soup and salad",
+        "menu description": "Thinly sliced brussel sprouts and red onions, and did a quick blanch on them. Seared some Nueske Apple Smoked Bacon, then combined a little of the bacon oil to a balsamic stout reduction for the dressing. To pair with a delicate Burrata cheese ball.",
+        "name": "Caprese Salad",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "31",
+        "meal type": "soup and salad",
+        "menu description": "Mixed Greens tossed with a house made raspberry vinaigrette, fresh cantaloupe, duck confit, and wasabi peas for a little crunch.",
+        "name": "Sweet Fowl",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "32",
+        "meal type": "soup and salad",
+        "menu description": "",
+        "name": "Cheddar Ale Soup",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "33",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Thin Crust Pizza",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "34",
+        "meal type": "dessert",
+        "menu description": "Drunken cherry chocolate cake",
+        "name": "An Inappropriate Amount of Chocolate",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "35",
+        "meal type": "beer",
+        "menu description": "Cream Ale that is super smooth, refreshing, and easy to drink. It comes in at 5% alcohol.",
+        "name": "Midnight Summer's Dream",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "36",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Mac & Cheese",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "37",
+        "meal type": "appetizer",
+        "menu description": "",
+        "name": "Apps Board",
+        "price": "",
+        "restaurant": "Ascension Brewing Company",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "38",
+        "meal type": "main",
+        "menu description": "Grilled on rye with swiss cheese, Union slaw & our cherry dressing, served with a side of roasters Wigley's corned beef or house-roasted turkey.",
+        "name": "Union Reuben",
+        "price": "$11.50",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "40",
+        "meal type": "main",
+        "menu description": "House-roasted turkey breast, caramelized onions, cranberry chutney & Havarti cheese grilled on rye, potato salad side.",
+        "name": "Turkey Melt",
+        "price": "$9.50",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "yes",
+        "id": "41",
+        "meal type": "main",
+        "menu description": "Pleva's Meats Traverse City, Mi smoked pork, pecan & cherry sausage, saut\u00e9ed mushrooms & onions, roast potatoes to boot.",
+        "name": "Pecan Cherry",
+        "price": "$9.95",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "42",
+        "meal type": "main",
+        "menu description": "House-cut ham, Woodshop pulled pork, pickles, pickled chilies, Swiss cheese with whole grain mustard mayonnaise, pressed on house-made focaccia, roasters, pickle on the side.",
+        "name": "Union Cubano",
+        "price": "$9.50",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "43",
+        "meal type": "main",
+        "menu description": "Vermont sharp cheddar & mild Pinconning layered with Penne Rigate & a crunchy crust.",
+        "name": "Mac & Cheese",
+        "price": "Full Order $13.95; Full Order w/Ham $16.20; Half Order $6.95; Half Order w/Ham $7.90",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "44",
+        "meal type": "main",
+        "menu description": "Walnut-stuffed French bread rounds served with pure Michigan maple syrup.",
+        "name": "French Toast",
+        "price": "$8.95",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "45",
+        "meal type": "main",
+        "menu description": "Scrambled eggs, Woodshop Maple Bacon, red onions & mozzarella atop ranchero sauce.",
+        "name": "Breakfast Crackercrust Pizza",
+        "price": "$9.50",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "46",
+        "meal type": "main",
+        "menu description": "Three eggs with spinach & mushrooms, topped with parmesan, tomato garnish.",
+        "name": "Frittata",
+        "price": "$7.95",
+        "restaurant": "Clarkston Union Bar & Kitchen",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "47",
+        "meal type": "main",
+        "menu description": "Asian marinated salmon roasted on cedar plank served with House Crispelli or Caesar side salad, and two side dishes of the day.",
+        "name": "Cedar Plank Salmon",
+        "price": "$16.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "48",
+        "meal type": "soup and salad",
+        "menu description": "House blend lettuce, kalamata olives, beets, tomato, marinated red onion, cucumber and feta, with lemon oregano dressing.",
+        "name": "Mediterranean Salad",
+        "price": "Small $5.25; Entr\u00e9e $8.50; Family $13.95",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "49",
+        "meal type": "main",
+        "menu description": "Traditional mozzarella, extra virgin olive oil, parmigiano reggiano, minced and roasted garlic, artichoke heart.",
+        "name": "White Pie",
+        "price": "Small $8.95; Large $15.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "50",
+        "meal type": "main",
+        "menu description": "Our french bread soaked in a sweet custard batter, cooked to a golden brown, served with warm syrup and berry compote.",
+        "name": "Crispelli's French Toast",
+        "price": "$7.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "51",
+        "meal type": "soup and salad",
+        "menu description": "House blend lettuce, dried cherries & cranberries, poached apples & pears, bleu cheese, candied walnuts, bacon with sherry vinaigrette.",
+        "name": "Michigan Salad",
+        "price": "Entr\u00e9e $9.50; Family $15.95",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "52",
+        "meal type": "main",
+        "menu description": "Aged prosciutto, extra virgin olive oil, minced garlic, fresh mozzarella & arugula.",
+        "name": "Proscuitto Pizza",
+        "price": "Small $9.50; Large $16.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "53",
+        "meal type": "soup and salad",
+        "menu description": "Crispelli salad with ham, oldani salame & fresh mozzarella.",
+        "name": "Antipasto Salad",
+        "price": "Entr\u00e9e $9.50; Family $15.95",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "54",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Chicken & Bacon 3-Cheese Mac",
+        "price": "$10.95",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "55",
+        "meal type": "main",
+        "menu description": "Tomato sauce and mozzarella. Additional toppings available. Traditional Toppings: Pepperoni, Mushroom, Green Pepper, Onion, Ham, Italian Sausage, Bacon, Black Olives, Spinach, Pineapple, Mild Pepper, Tomato, Jalape\u00f1o Pepper. Gourmet Toppings: Roasted Garlic, Fresh Basil, Carmelized Onion, Grilled Chicken, Artichoke, Anchovy, Arugula.",
+        "name": "Deep Dish Pizza (Detroit Style)",
+        "price": "14.25; Additional Toppings: Small $1 each; Large $2 each",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "56",
+        "meal type": "main",
+        "menu description": "Rosemary chicken, bacon, cheddar, lettuce on sourdough w/basil pesto or chili garlic mayo.",
+        "name": "Grilled Chicken Club",
+        "price": "$10.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "57",
+        "meal type": "main",
+        "menu description": "Shrimp, chorizo sausage, cilantro pesto, roasted red peppers, fontina, gruyere, feta.",
+        "name": "Shrimp & Chorizo Pizza",
+        "price": "Small $9.50; Large $16.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "58",
+        "meal type": "soup and salad",
+        "menu description": "Marinated flank steak, spinach, bleu cheese, strawberry, marinated red onion, tomato, with lemon poppyseed dressing.",
+        "name": "Flank Steak Salad",
+        "price": "$10.50",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "59",
+        "meal type": "dessert",
+        "menu description": "",
+        "name": "Handmade, Authentic Italian Cannoli",
+        "price": "",
+        "restaurant": "Crispelli's Bakery & Pizzeria",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "60",
+        "meal type": "soup and salad",
+        "menu description": "Chicken, lettuce, tomato, pita chips, onions, cucumber and peppers. Served with oil and vinegar.",
+        "name": "Chicken Shawarma Salad",
+        "price": "Lunch Portion: $6.75; Dinner Portion: $8.75",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "61",
+        "meal type": "soup and salad",
+        "menu description": "Ribeye, lettuce, tomato, pita chips, onions, cucumber, and peppers. Served with oil and vinegar.",
+        "name": "Steak Salad",
+        "price": "$11.95",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "62",
+        "meal type": "main",
+        "menu description": "Grilled marinated chicken, lettuce, tomato, pickles, garlic sauce, and spices wrapped in a pita.",
+        "name": "Chicken Shawarma",
+        "price": "$4.99",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "63",
+        "meal type": "main",
+        "menu description": "Spicy hot old school dog served with grainy mustard.",
+        "name": "The 1920 Red Hot",
+        "price": "$4.00",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "64",
+        "meal type": "appetizer",
+        "menu description": "Puree of chick peas, spices, lemon juice, topped with grilled marinated beef garnished with paprika and pickles.",
+        "name": "Hummus & Beef",
+        "price": "$7.50",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "65",
+        "meal type": "main",
+        "menu description": "Tomato, cucumber, peppers, onions, Bulgarian goat cheese, fries and mayonnaise sauce wrapped in a pita.",
+        "name": "Vegetarian Shawarma",
+        "price": "$4.99",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "66",
+        "meal type": "main",
+        "menu description": "Grilled marinated beef, tomato, lettuce, pickles, onions, garlic and spices wrapped in a pita.",
+        "name": "Beef Shawarma",
+        "price": "$4.99",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "67",
+        "meal type": "appetizer",
+        "menu description": "",
+        "name": "Curly Fries",
+        "price": "Full order: $3; Half order: $2",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "68",
+        "meal type": "main",
+        "menu description": "Ground beef, spices, and rice stuffed in fresh grape leaves smothered in our zesty sauce, with sour cream on the side.",
+        "name": "Stuffed Grape Leaves",
+        "price": "$6.25",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "69",
+        "meal type": "appetizer",
+        "menu description": "Muenster cheese breaded and fried golden brown.",
+        "name": "Fried Cheese",
+        "price": "$5.50",
+        "restaurant": "Bucharest Grill",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "70",
+        "meal type": "main",
+        "menu description": "Cream cheese drizzle. Dusted with powdered sugar.",
+        "name": "Graham Cracker Crusted French Toast",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "71",
+        "meal type": "main",
+        "menu description": "Stuffed with banana cream cheese, topped with fresh berries & berry compote. Dusted with powdered sugar.",
+        "name": "Very Berry Stuffed French Toast",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "72",
+        "meal type": "main",
+        "menu description": "Ham steak, swiss and strawberry preserves. Dusted with powdered sugar.",
+        "name": "Monte Cristo French Toast",
+        "price": "$9.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "73",
+        "meal type": "main",
+        "menu description": "House made corn cake, chorizo, cheddar and ranchero sauce.",
+        "name": "Voodoo Eggs Benedict",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "74",
+        "meal type": "main",
+        "menu description": "Cream cheese drizzle, dusted with cocoa powder. Dusted with powdered sugar.",
+        "name": "Red Velvet Pancakes",
+        "price": "$9.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "75",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Catfish & Waffle",
+        "price": "$14.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "76",
+        "meal type": "main",
+        "menu description": "Tomato, onion, ham, bacon, guacamole & swiss. Made with 3 eggs.",
+        "name": "Baja Cali Omelet",
+        "price": "$11.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "77",
+        "meal type": "main",
+        "menu description": "Cinnamon raisin bread stuffed with apple walnut cream cheese.",
+        "name": "Apple Walnut Stuffed French Toast",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "78",
+        "meal type": "main",
+        "menu description": "Caramel, white chocolate chip & banana. Dusted with powdered sugar.",
+        "name": "Chunky Monkey Pancakes",
+        "price": "$9.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "79",
+        "meal type": "main",
+        "menu description": "Dusted with powdered sugar and whipped cream.",
+        "name": "Banana Nutella Crepe",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "80",
+        "meal type": "main",
+        "menu description": "English muffin, tomato slices, baby spinach & hollandaise.",
+        "name": "Florentine Eggs Benedict",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "81",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Fresh Fruit, Granola & Yogurt",
+        "price": "$8.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "82",
+        "meal type": "main",
+        "menu description": "English muffin, canadian bacon & hollandaise.",
+        "name": "Traditional Eggs Benedict",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "83",
+        "meal type": "main",
+        "menu description": "Comes with two patties.",
+        "name": "Salmon Croquettes w/ Eggs",
+        "price": "$14.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "84",
+        "meal type": "main",
+        "menu description": "Dusted with powdered sugar.",
+        "name": "Pecan Banana Pancakes",
+        "price": "$8.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "85",
+        "meal type": "main",
+        "menu description": "Dusted with powdered sugar.",
+        "name": "Mickey Mouse Pancakes",
+        "price": "$7.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "86",
+        "meal type": "main",
+        "menu description": "8oz. Prime, chipotle mayo, lettuce, tomato & a cheddar/jack blend on a toasted house bun.",
+        "name": "Woodward Burger",
+        "price": "$10.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "87",
+        "meal type": "main",
+        "menu description": "Coated in buttermilk & house seasonings.",
+        "name": "Fried Chicken & Waffle",
+        "price": "$13.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "88",
+        "meal type": "main",
+        "menu description": "Cheese filled tortilla jayered w/ house potatoes, sunny side up eggs, ranchero sauce, sour cream & guacamole.",
+        "name": "Huevos Rancheros",
+        "price": "$9.50",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "89",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Cheesy Grits",
+        "price": "$3.00",
+        "restaurant": "The Hudson Cafe",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "90",
+        "meal type": "appetizer",
+        "menu description": "Rye toast, house sauerkraut, egg.",
+        "name": "Beef Tartare",
+        "price": "$14.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "91",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Mac & Cheese",
+        "price": "$10.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "92",
+        "meal type": "appetizer",
+        "menu description": "",
+        "name": "Brussel Sprouts and Walnuts",
+        "price": "$10.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "93",
+        "meal type": "main",
+        "menu description": "Confit potato, caramelized onion, zip sauce.",
+        "name": "Dry Aged Porterhouse for two",
+        "price": "$96.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "94",
+        "meal type": "main",
+        "menu description": "Bacon, cheddar, fried egg, pickled onion.",
+        "name": "Roast Burger",
+        "price": "$12.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "95",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Rosemary Fries",
+        "price": "$6.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "96",
+        "meal type": "main",
+        "menu description": "Preserved lemon, granna padano, smoked garlic.",
+        "name": "Dry Aged Ribeye",
+        "price": "$46.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "97",
+        "meal type": "dessert",
+        "menu description": "Chocolate, malt marshmallow, pretzel, smoked salt, whiskey sauce.",
+        "name": "The Bar",
+        "price": "$11.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "98",
+        "meal type": "appetizer",
+        "menu description": "Sea salt, oregano, capers & chilies.",
+        "name": "Roasted Marrow",
+        "price": "$10.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "99",
+        "meal type": "main",
+        "menu description": "With sea salt & olive oil.",
+        "name": "Filet Mignon",
+        "price": "$38.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "100",
+        "meal type": "appetizer",
+        "menu description": "Buffalo, pig ear, celery, blue cheese.",
+        "name": "Crispy Pork Belly",
+        "price": "$12.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "101",
+        "meal type": "main",
+        "menu description": "Cheddar grits, pickled chilies, bbq onions.",
+        "name": "Smoked Pork Chop",
+        "price": "$30.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "102",
+        "meal type": "main",
+        "menu description": "With Crab Bearnaise.",
+        "name": "Filet Mignon",
+        "price": "$42.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "103",
+        "meal type": "appetizer",
+        "menu description": "Horseradish & mushrooms.",
+        "name": "Beef Cheek Pierogies",
+        "price": "$12.00",
+        "restaurant": "Roast",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "104",
+        "meal type": "main",
+        "menu description": "Burger with chorizo sausage, avocado, salsa verde, roasted red peppers, red onion & pepper jack cheese.",
+        "name": "New Jack City",
+        "price": "$10.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "105",
+        "meal type": "main",
+        "menu description": "Burger with coleslaw, pastrami, stadium mustard & swiss cheese.",
+        "name": "Fat Doug",
+        "price": "$10.49",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "106",
+        "meal type": "main",
+        "menu description": "Burger with ghost chili, pickled jalape\u00f1os, cilantro, red onion, pepper jack cheese & habanero sauce.",
+        "name": "Atomic",
+        "price": "$9.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "107",
+        "meal type": "main",
+        "menu description": "Burger with sunny side up egg, bacon, pickled red onions & cheddar cheese.",
+        "name": "Lola",
+        "price": "$10.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "108",
+        "meal type": "side",
+        "menu description": "",
+        "name": "B Spot Onion Rings",
+        "price": "$6.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "109",
+        "meal type": "main",
+        "menu description": "Beer brat with carolina style bbq pulled pork, shredded cheddar cheese & jalape\u00f1os.",
+        "name": "Mr. Porky",
+        "price": "$8.49",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "110",
+        "meal type": "side",
+        "menu description": "Thin cut fries with rosemary.",
+        "name": "Lola Fries",
+        "price": "$3.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "111",
+        "meal type": "side",
+        "menu description": "Pulled pork, cheese whiz, pickled chilies.",
+        "name": "Porky Fries",
+        "price": "$8.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "112",
+        "meal type": "side",
+        "menu description": "With lettuce, tomato & onion.",
+        "name": "Bacon Cheeseburger",
+        "price": "$9.99",
+        "restaurant": "B Spot",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "113",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Greek Salad",
+        "price": "$5.25",
+        "restaurant": "American Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "114",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Coney Island Hot Dog",
+        "price": "$2.50",
+        "restaurant": "American Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "115",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Chili Fries",
+        "price": "$3.00",
+        "restaurant": "American Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "116",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Chili Cheese Fries",
+        "price": "$3.75",
+        "restaurant": "American Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "117",
+        "meal type": "main",
+        "menu description": "Beef Patty-Sweet Potato-Housemade BBQ Sauce.",
+        "name": "BBQ Bacon",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "118",
+        "meal type": "main",
+        "menu description": "Ribeye-Peppers & Onions-Squeeze Cheese.",
+        "name": "Philly Cheesesteak",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "119",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Le Poutine",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "120",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Venison Chili Cheese Fries",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "121",
+        "meal type": "side",
+        "menu description": "Parmesan-Mornay.",
+        "name": "Mac & Cheese",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "122",
+        "meal type": "main",
+        "menu description": "Wigley\u2019s-Kraut-Pickles-Mustard Aioli.",
+        "name": "Corned Beef",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "123",
+        "meal type": "main",
+        "menu description": "Chicken-Mornay-Bacon.",
+        "name": "Hot Brown",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "124",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Truffle & Herb Fries",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "125",
+        "meal type": "main",
+        "menu description": "Marinated Tempeh-Wasabi Mayo-Wakame Salad.",
+        "name": "Tempeh",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "126",
+        "meal type": "main",
+        "menu description": "Tomato Slice-Avocado Sour Cream.",
+        "name": "Black Bean",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "127",
+        "meal type": "main",
+        "menu description": "Bleu Cheese Spread-Buffalo Sauce-Celery.",
+        "name": "Buffalo Chicken",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "128",
+        "meal type": "main",
+        "menu description": "Beef Patty-Peanut Butter-Kimchi.",
+        "name": "Korean",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "129",
+        "meal type": "soup and salad",
+        "menu description": "Chicken-Fresno Pepper-Cilantro-Tortilla Chips.",
+        "name": "Chicken Tortilla Soup",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "130",
+        "meal type": "side",
+        "menu description": "Cr\u00e8me Fraiche-Shallot-Vinegar.",
+        "name": "Cucumbers",
+        "price": "$2.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "131",
+        "meal type": "main",
+        "menu description": "Venison Chili-Onions-Mustard.",
+        "name": "Coney Dog",
+        "price": "$2.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "132",
+        "meal type": "soup and salad",
+        "menu description": "Quinoa-Lemon-Shallot.",
+        "name": "Kale Salad",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "133",
+        "meal type": "main",
+        "menu description": "Onions-Pickles.",
+        "name": "Cheeseburger",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "134",
+        "meal type": "main",
+        "menu description": "Tomato Slice-Mint Tzatziki.",
+        "name": "Gyro",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "135",
+        "meal type": "dessert",
+        "menu description": "Cinnamon-Nutella-Fluff.",
+        "name": "Corktown Smore",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "136",
+        "meal type": "dessert",
+        "menu description": "Fluff-Peanut Butter.",
+        "name": "Fluffer Nutter",
+        "price": "$2.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "137",
+        "meal type": "main",
+        "menu description": "Panko-Sage Maple Syrup.",
+        "name": "Fried Chicken",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "138",
+        "meal type": "main",
+        "menu description": "Pork Loin-Ham-Jack Cheese-Mustard-Pickles.",
+        "name": "Cuban",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "139",
+        "meal type": "main",
+        "menu description": "Corn Meal-Tartar.",
+        "name": "Catfish",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "140",
+        "meal type": "main",
+        "menu description": "Kale-Chimichurri.",
+        "name": "Quinoa",
+        "price": "$3.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "141",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Cajun Fries",
+        "price": "$2.00",
+        "restaurant": "Green Dot Stables",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "142",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Coney Island Hot Dog",
+        "price": "$2.60",
+        "restaurant": "Lafayette Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "143",
+        "meal type": "side",
+        "menu description": "",
+        "name": "Chili Cheese Fries",
+        "price": "$3.60",
+        "restaurant": "Lafayette Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "144",
+        "meal type": "main",
+        "menu description": "",
+        "name": "Loose Hamburger",
+        "price": "$3.15",
+        "restaurant": "Lafayette Coney Island",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "145",
+        "meal type": "main",
+        "menu description": "Start with our 10\" pizza crust, then pick your favorite sauce and cheese ... Add any ingredient you desire.",
+        "name": "Build Your Own Pie",
+        "price": "Starts at $8; Vegetable & Fruit - .75 - Meat - 1.00 - Extra Cheese - 1.25",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "146",
+        "meal type": "main",
+        "menu description": "Pesto sauce, goat cheese, roasted red peppers & roasted garlic.",
+        "name": "The Godfather Pizza",
+        "price": "$9.00",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "147",
+        "meal type": "main",
+        "menu description": "Habanero sauce, anejo queso, chorizo sausage, red onions, jalapeno peppers, topped with sour cream, cilantro & a squeeze of lime.",
+        "name": "Sopla Fuego Pizza",
+        "price": "$10.00",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "148",
+        "meal type": "main",
+        "menu description": "Hickory BBQ sauce, fontina, bacon, roasted chicken, onions & fresh cilantro.",
+        "name": "BBQ Chicken Pizza",
+        "price": "$10.00",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "149",
+        "meal type": "main",
+        "menu description": "Herb tomato sauce, fresh mozzarella & fresh basil.",
+        "name": "Margherita Pizza",
+        "price": "$8.00",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "150",
+        "meal type": "main",
+        "menu description": "Olive oil, gorgonzola, tomatoes, caramelized red onions, artichoke hearts, fresh basil.",
+        "name": "Danimal Pizza",
+        "price": "$9.00",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "151",
+        "meal type": "main",
+        "menu description": "Olive oil, gorgonzola, oven roasted pears and figs, red onions, topped with spices.",
+        "name": "Roasted Pear & Fig",
+        "price": "$9.00",
+        "restaurant": "Motor City Brewing Works",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "152",
+        "meal type": "main",
+        "menu description": "Sy Ginsberg corned beef, creamy coleslaw, Swiss cheese and Thousand Island dressing on an onion roll, served warm.",
+        "name": "Barrett",
+        "price": "$10.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "153",
+        "meal type": "dessert",
+        "menu description": "Mudgie-made bread pudding waffle with diced apples, cooked to order, served warm topped with a scoop of premium horchata ice cream from Calder Dairy, Sanders Butterscotch Caramel, whipped cream, walnuts and dash of cinnamon.",
+        "name": "Sweet Ruth",
+        "price": "$7.50; Waffle and caramel only - $4.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "154",
+        "meal type": "main",
+        "menu description": "Milano salami, Sy Ginsberg Gold Label pastrami, Sy Ginsberg corned beef, cherrywood smoked bacon, beef brisket, sharp Cheddar cheese, romaine lettuce, and garlic mayo on a kaiser roll, served warm.",
+        "name": "Gutty",
+        "price": "$10.50",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "155",
+        "meal type": "main",
+        "menu description": "Sy Ginsberg corned beef and Swiss cheese topped with a scoop of redskin potato salad on a kaiser roll, served warm with spicy mustard.",
+        "name": "That's Jared",
+        "price": "$10.50",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "156",
+        "meal type": "main",
+        "menu description": "Meatloaf of ground top sirloin, romaine lettuce, tomato, red onion, ketchup and yellow mustard on a kaiser roll, served warm.",
+        "name": "Bat Outta Hell",
+        "price": "$10; add bacon -$1.00, add Cheddar - $.50",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "157",
+        "meal type": "dessert",
+        "menu description": "Mudgie-made brownie waffle, cooked to order and served warm, topped with a scoop of premium vanilla ice cream from Calder Dairy, Sander\u2019s Hot Fudge and whipped cream.",
+        "name": "Fudgie Mudgie",
+        "price": "$7; Add walnuts - $.50. Waffle and hot fudge only - $4.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "158",
+        "meal type": "main",
+        "menu description": "With drop biscuits, potatoes, fried egg, cheddar and gravy.",
+        "name": "Sausage Gravy Skillet",
+        "price": "$10; Biscuits and Gravy side $6",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "159",
+        "meal type": "main",
+        "menu description": "Turkey breast, cherrywood smoked bacon, strawberry cream cheese, baby spinach and strawberry preserves, topped with a fried egg on multi-grain bread and served warm.",
+        "name": "Sho'Nuff",
+        "price": "$10.25",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "160",
+        "meal type": "main",
+        "menu description": "Roasted turkey breast, Neuske's nitrate free cherrywood smoked bacon, avocado, tomato, romaine lettuce, garlic mayo and melted pepper Jack cheese on an 8 \u201c hoagie bun served warm.",
+        "name": "Madill",
+        "price": "$11.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "161",
+        "meal type": "main",
+        "menu description": "Beef brisket, roasted turkey breast, house-made vegetable cream cheese, romaine lettuce, red onion, and Brown- wood Farm\u2019s Kream Mustard on an onion roll, served warm.",
+        "name": "Mudgie",
+        "price": "$10.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "162",
+        "meal type": "main",
+        "menu description": "Herbed chicken salad and spinach spread layered under Havarti cheese, avocado, sunflower sprouts, romaine lettuce, and tomato on toasted pumpernickel.",
+        "name": "Kenna",
+        "price": "$10.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "163",
+        "meal type": "main",
+        "menu description": "Spinach spread, Havarti cheese, avocado, sunflower sprouts, lettuce, tomato and red onion on toasted multi-grain bread, served open face.",
+        "name": "Ivey",
+        "price": "$9.25",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "164",
+        "meal type": "appetizer",
+        "menu description": "With olives, roasted peppers and marinated artichokes, cucumber, carrots, and crackers.",
+        "name": "Hummus Board",
+        "price": "$10.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "165",
+        "meal type": "main",
+        "menu description": "With corned beef, kraut, swiss, thousand-aise on rye, served with hash brown potatoes or greens.",
+        "name": "Classic Eggs Reuben Benedict",
+        "price": "$9.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "166",
+        "meal type": "side",
+        "menu description": "House made with fresh basil, baby spinach, egg, carrots, red peppers and Michigan dried cherries. A fresh twist on the classic.",
+        "name": "Macaroni Salad",
+        "price": "$3.50",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "167",
+        "meal type": "main",
+        "menu description": "Roasted chicken breast, our jerk mayo, red onion, romaine lettuce, tomato, pepper Jack cheese on an onion roll, served warm.",
+        "name": "Jerk",
+        "price": "$9.50; add bacon - $1.00",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "168",
+        "meal type": "main",
+        "menu description": "Avocado, baby spinach, sunflower sprouts, walnuts, dried cranberries, diced apples, shredded carrots and cucumber with raspberry vinaigrette rolled in whole wheat flat bread.",
+        "name": "Hippie Dippie Sh*t Man",
+        "price": "$9.75",
+        "restaurant": "Mudgie's Deli",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "169",
+        "meal type": "main",
+        "menu description": "Grilled bread, quail egg, herb salad.",
+        "name": "Beef Tartare",
+        "price": "$14.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "170",
+        "meal type": "main",
+        "menu description": "Grits, spicy chow chow.",
+        "name": "Grilled Shrimp",
+        "price": "$14.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "171",
+        "meal type": "main",
+        "menu description": "Fennel, citrus, olive, saffron.",
+        "name": "Charred Octopus",
+        "price": "$14.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "172",
+        "meal type": "soup and salad",
+        "menu description": "Crispy chicken skin, lemon, sourdough crouton.",
+        "name": "Kale Caesar",
+        "price": "$7.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "173",
+        "meal type": "main",
+        "menu description": "Housemade ricotta, aged balsamic, green salad.",
+        "name": "Mushroom Toast",
+        "price": "$12.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "174",
+        "meal type": "main",
+        "menu description": "Cavatelli, house ricotta, pistachio.",
+        "name": "Rabbit Ragu",
+        "price": "$18.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "175",
+        "meal type": "main",
+        "menu description": "Tomato, saffron, chili, bread crumbs.",
+        "name": "Squid Ink Chittara",
+        "price": "$14.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "176",
+        "meal type": "main",
+        "menu description": "Arugula, pickles. Lunch only.",
+        "name": "Steak Frites Salad",
+        "price": "$18.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "177",
+        "meal type": "main",
+        "menu description": "Lentils, spicy tomato, feta, herbs. Brunch only.",
+        "name": "Baked Eggs",
+        "price": "$11.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "178",
+        "meal type": "side",
+        "menu description": "Brunch only.",
+        "name": "Grilled Pork Belly w/ Chile-Maple Glaze",
+        "price": "$7.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "179",
+        "meal type": "dessert",
+        "menu description": "Amaretti, cream.",
+        "name": "Apricot Ch\u00e8vre Tart",
+        "price": "$9.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "180",
+        "meal type": "appetizer",
+        "menu description": "Shaved veggies, caper, lemon, Parmesan.",
+        "name": "Vegetable Carpaccio",
+        "price": "$8.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "181",
+        "meal type": "dessert",
+        "menu description": "Salt & pepper ice cream, shortbread.",
+        "name": "Strawberry Rhubarb Sundae",
+        "price": "$7.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "182",
+        "meal type": "appetizer",
+        "menu description": "Wild mushrooms, peas, crispy prosciutto.",
+        "name": "Spinach & Ricotta Gnocchi",
+        "price": "$17.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "183",
+        "meal type": "main",
+        "menu description": "Garlic scapes, yogurt, lemon.",
+        "name": "Smoked Lamb Ribs",
+        "price": "$14.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "184",
+        "meal type": "appetizer",
+        "menu description": "White anchovy, roasted garlic, chile, mozzarella.",
+        "name": "Broccoli Flatbread",
+        "price": "$12.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "185",
+        "meal type": "side",
+        "menu description": "Brunch only.",
+        "name": "Tots",
+        "price": "$5.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "186",
+        "meal type": "appetizer",
+        "menu description": "Ramp cr\u00e8me fra\u00eeche, raclette, dill.",
+        "name": "Smoked Potato",
+        "price": "$9.00",
+        "restaurant": "Selden Standard",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "187",
+        "meal type": "",
+        "menu description": "",
+        "name": "",
+        "price": "",
+        "restaurant": "",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "188",
+        "meal type": "",
+        "menu description": "",
+        "name": "",
+        "price": "",
+        "restaurant": "",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "189",
+        "meal type": "",
+        "menu description": "",
+        "name": "",
+        "price": "",
+        "restaurant": "",
+        "restaurant_id": ""
+    },
+    {
+        "gluten free": "",
+        "id": "190",
+        "meal type": "",
+        "menu description": "",
+        "name": "",
+        "price": "",
+        "restaurant": "",
+        "restaurant_id": ""
+    }
+]

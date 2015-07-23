@@ -297,6 +297,7 @@ DEPENDENCIES
   factory_girl_rails
   ffaker (= 2.1.0)!
   jquery-rails
+  json
   omniauth
   omniauth-facebook
   omniauth-linkedin

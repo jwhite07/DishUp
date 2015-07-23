@@ -77,4 +77,4 @@ end
 #api gems
 gem 'active_model_serializers'
 
-
+gem 'json'

@@ -33,7 +33,7 @@ module DishUp
     end
 
     config.autoload_paths += %W(\#{config.root}/lib)
-     
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
 

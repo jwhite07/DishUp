@@ -18,7 +18,10 @@ ActiveAdmin.register Restaurant do
       panel menu.name do
         h2 "Dishes"
         table_for menu.dishes do
-          #column "Image", {|dishpic| }
+          column "Image" do |d|
+            image_tag d.lead_dishpic.url
+          end
+            
           column "Name", :name
           column "Description", :description
           column "rating", :rating
@@ -34,6 +37,9 @@ ActiveAdmin.register Restaurant do
       row :state
       row :postal_code
       row :premium_level
+      row :logo do
+        image_tag restaurant.logo
+      end
     end
   end
 
