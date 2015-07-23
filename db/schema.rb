@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722205256) do
+ActiveRecord::Schema.define(version: 20150723003704) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(version: 20150722205256) do
     t.string   "name"
     t.decimal  "price"
     t.integer  "menu_id"
-    t.decimal  "rating"
+    t.decimal  "rating",        default: 0.0
     t.text     "description"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "restaurant_id"
   end
 
@@ -121,14 +121,14 @@ ActiveRecord::Schema.define(version: 20150722205256) do
 
   create_table "dishpics", force: :cascade do |t|
     t.integer  "dish_id"
-    t.integer  "favorites"
+    t.integer  "favorites",     default: 0
     t.integer  "user_id"
     t.boolean  "flagged"
     t.boolean  "remove"
     t.text     "caption"
-    t.decimal  "quality_score"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.decimal  "quality_score", default: 0.0
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "url"
   end
 
@@ -151,8 +151,9 @@ ActiveRecord::Schema.define(version: 20150722205256) do
   create_table "menus", force: :cascade do |t|
     t.string   "name"
     t.integer  "restaurant_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "default",       default: false
   end
 
   add_index "menus", ["restaurant_id"], name: "index_menus_on_restaurant_id"

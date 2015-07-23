@@ -1,4 +1,5 @@
 class Dish < ActiveRecord::Base
+  after_save :add_to_default_menu
   belongs_to :restaurant
   
   has_many :dishes_dish_types
@@ -14,10 +15,14 @@ class Dish < ActiveRecord::Base
   
   has_many :dish_ratings
   
-  validates :name,  :rating, presence: true
+  validates :name,  :rating, :restaurant_id, presence: true
   validates :rating, numericality: {
     greater_than_or_equal_to: 0, 
     less_than_or_equal_to: 5
   }
+  def add_to_default_menu
+    default_menu = Menu.where(restaurant_id: self.restaurant.id ).first
+    DishesMenu.where(menu_id: default_menu.id, dish_id: self.id).first_or_create!
+  end
   
 end
