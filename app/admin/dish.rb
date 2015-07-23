@@ -1,5 +1,5 @@
 ActiveAdmin.register Dish do
-  permit_params :name, :price, :description, :restaurant_id, :rating, dish_type_ids: [], dishpics_attributes: [:url, :caption, :user_id]
+  permit_params :id, :name, :price, :description, :restaurant_id, :rating, dish_type_ids: [], dishpics_attributes: [:id, :url, :caption, :user_id]
   show do
     panel "Details" do
       attributes_table_for dish do
