@@ -4,6 +4,7 @@ class Dish < ActiveRecord::Base
   
   has_many :dishes_dish_types
   has_many :dish_types, :through => :dishes_dish_types
+  accepts_nested_attributes_for :dish_types
   
   has_many :dishes_menus
   has_many :menus, :through => :dishes_menus
@@ -12,6 +13,7 @@ class Dish < ActiveRecord::Base
   has_many :ingredients, :through => :dishes_ingredients
   
   has_many :dishpics
+  accepts_nested_attributes_for :dishpics
   
   has_many :dish_ratings
   
