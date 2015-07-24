@@ -3,12 +3,55 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
-    div class: "blank_slate_container", id: "dashboard_default_message" do
-      span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
+    columns do
+      column do
+        panel "Restaurants" do 
+          div class: "dashboard_status" do
+            h1 Restaurant.all.count
+            link_to "Manage Restaurants", admin_restaurants_path
+          end
+        end
+      end
+      column do
+        panel "Dishes" do 
+          div class: "dashboard_status" do
+            h1 Dish.all.count
+            link_to "Manage Dishes", admin_dishes_path
+          end
+        end
+      end
+      column do
+        panel "DishPics" do 
+          div class: "dashboard_status" do
+            h1 Dishpic.all.count
+            link_to "Manage DishPics", admin_dishpics_path
+          end
+        end
+      end
+      column do
+        panel "Users" do 
+          div class: "dashboard_status" do
+            h1 User.all.count
+            link_to "Manage Users", admin_users_path
+          end
+        end
+      end
+      
+    end
+    columns do 
+      column do
+        panel "Newest Restaurants" do
+          table_for Restaurant.all.order("id desc").limit(10) do
+                      column("Name")    {|rest| link_to(rest.name, admin_restaurant_path(rest))                               }
+                      column("City")    {|rest| text_node "#{rest.city}, #{rest.state}" }
+                      column("Dishes")  {|rest| text_node rest.dishes.count                      }
+                    end
+        end
       end
     end
+    
+          
+    
 
     # Here is an example of a simple dashboard with columns and panels.
     #
