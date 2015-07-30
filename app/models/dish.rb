@@ -25,6 +25,8 @@ class Dish < ActiveRecord::Base
   def lead_dishpic
     dishpics.first
   end
+  
+  
   def add_to_default_menu
     default_menu = Menu.where(restaurant_id: self.restaurant.id ).first
     DishesMenu.where(menu_id: default_menu.id, dish_id: self.id).first_or_create!

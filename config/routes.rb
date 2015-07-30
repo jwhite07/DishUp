@@ -22,6 +22,10 @@ Rails.application.routes.draw do
       end
       resources :dishpic_quality_ratings, :only => [:update]
       
+      resources :restaurants, :only => [:index] do
+        resources :dishes, :only => [:index]
+      end
+      
     end
   end
 end
