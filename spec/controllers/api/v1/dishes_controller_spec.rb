@@ -43,5 +43,25 @@ RSpec.describe Api::V1::DishesController, type: :controller do
     end
     it {should respond_with 200}
   end
-  
+  describe "dishes GET #show" do
+    before(:each) do
+      dishes = []
+      4.times do 
+        dishes << FactoryGirl.create(:dish_with_dishpics)
+      end
+      @dish = dishes[rand(0...3)]
+      get :show, {:dish_id => @dish.id}
+    end
+    it "returns a dish from the database" do
+      dishes_response = json_response
+      expect(dishes_response[:dishes].id).to eq(@dish.id)
+      it "includes restaurant details" do
+        dishes_response[:dishes][:restaurant].id).to eq(@dish.restaurant.id)
+      end
+      it "includes 5 dishpics" do
+        dishes_response[:dishes][:dishpics].length).to eq(5)
+      end
+    end
+    it {should respond_with 200}
+  end
 end

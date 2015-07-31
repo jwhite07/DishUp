@@ -19,6 +19,7 @@ FactoryGirl.define do
       after(:create) do |dish, evaluator|
         create_list(:dishpic, evaluator.dishpic_count, dish: dish)
         
+        
       end
     end 
     factory :dish_with_ratings do
