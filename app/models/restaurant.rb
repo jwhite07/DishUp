@@ -1,4 +1,7 @@
 class Restaurant < ActiveRecord::Base
+  geocoded_by :full_address
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+                    
   after_save :add_default_menu
   has_many :menus
   validates_associated :menus
@@ -13,6 +16,9 @@ class Restaurant < ActiveRecord::Base
       menu.default = true
       menu.save!
     end
+  end
+  def full_address
+    address + city + state + postal_code
   end
   def self.import_from_json_file(filename)
     file = File.read(File.join(Rails.root, filename))

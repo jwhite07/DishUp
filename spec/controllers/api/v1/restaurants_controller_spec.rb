@@ -14,6 +14,7 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
       expect(restaurants_response[:restaurants].length).to eq(4)
     end
     it {should respond_with 200}
+    
   end
 
 end

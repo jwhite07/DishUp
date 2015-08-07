@@ -1,4 +1,4 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name,  :city, :state, :logo, :premium_level
+  attributes :id, :name,  :city, :state, :logo, :premium_level, :distance
  
 end

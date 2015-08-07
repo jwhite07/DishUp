@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723161021) do
+ActiveRecord::Schema.define(version: 20150807175455) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -187,6 +187,8 @@ ActiveRecord::Schema.define(version: 20150723161021) do
     t.string   "phone_number"
     t.string   "website"
     t.string   "hours"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "user_ingredient_preferences", force: :cascade do |t|
