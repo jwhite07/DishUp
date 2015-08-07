@@ -19,7 +19,7 @@ ActiveAdmin.register Restaurant do
         h2 "Dishes"
         table_for menu.dishes do
           column "Image" do |d|
-            image_tag d.lead_dishpic.url
+            image_tag d.lead_dishpic_url
           end
             
           column "Name", :name
