@@ -1,5 +1,5 @@
 class Restaurant < ActiveRecord::Base
-  #default_scope {where("dishes_count > ? ", 0)}
+  scope :only_with_dishes, -> {where("dishes_count > ? ", 0)}
   geocoded_by :full_address
   after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
                     
