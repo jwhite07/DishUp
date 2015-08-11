@@ -1,6 +1,6 @@
 class Dish < ActiveRecord::Base
   after_save :add_to_default_menu
-  belongs_to :restaurant
+  belongs_to :restaurant, :counter_cache => :dishes_count
   
   has_many :dishes_dish_types
   has_many :dish_types, :through => :dishes_dish_types
