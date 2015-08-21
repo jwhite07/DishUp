@@ -20,6 +20,7 @@ Geocoder.configure(
   # :distances => :linear    # :spherical or :linear
   # 
 )
+if Rails.env.test?
 Geocoder.configure(:lookup => :test)
 
 Geocoder::Lookup::Test.add_stub(
@@ -49,3 +50,4 @@ Geocoder::Lookup::Test.set_default_stub(
     }
   ]
 )
+end
