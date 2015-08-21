@@ -9,4 +9,11 @@ class DishSerializer < ActiveModel::Serializer
       return user_rating.rating
     end
   end
+  def location
+    if @latitude && @longitude
+      object.restaurant.locations.near(@latitude, @longitude)
+    else
+      object.restaurant.locations.first
+    end
+  end
 end

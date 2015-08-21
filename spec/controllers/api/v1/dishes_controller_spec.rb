@@ -57,9 +57,9 @@ RSpec.describe Api::V1::DishesController, type: :controller do
       dishes_response = json_response
       expect(dishes_response[:dish][:id]).to eq(@dish.id)
     end
-    it "includes restaurant details" do
+    it "includes location details" do
       dishes_response = json_response
-      expect(dishes_response[:dish][:restaurant][:id]).to eq(@dish.restaurant.id)
+      expect(dishes_response[:dish][:location][:id]).to eq(@dish.restaurant.locations.first.id)
     end
     it "includes 5 dishpics" do
       dishes_response = json_response

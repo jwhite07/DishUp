@@ -31,8 +31,9 @@ class Dish < ActiveRecord::Base
   
   
   def add_to_default_menu
-    default_menu = Menu.where(restaurant_id: self.restaurant.id ).first
-    DishesMenu.where(menu_id: default_menu.id, dish_id: self.id).first_or_create!
+    
+    default_section = MenuSection.where(restaurant_id: self.restaurant.id ).first_or_create!
+    DishMenuSection.where(menu_section_id: default_section.id, dish_id: self.id).first_or_create!
   end
   def self.import_from_json(filename, user_id)
     file = File.read(File.join(Rails.root, filename))
