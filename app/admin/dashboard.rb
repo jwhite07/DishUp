@@ -40,11 +40,11 @@ ActiveAdmin.register_page "Dashboard" do
     end
     columns do 
       column do
-        panel "Newest Restaurants" do
-          table_for Restaurant.all.order("id desc").limit(10) do
-                      column("Name")    {|rest| link_to(rest.name, admin_restaurant_path(rest))                               }
-                      column("City")    {|rest| text_node "#{rest.city}, #{rest.state}" }
-                      column("Dishes")  {|rest| text_node rest.dishes.count                      }
+        panel "Newest Locations" do
+          table_for Location.all.order("id desc").limit(10) do
+                      column("Name")    {|loc| link_to(loc.name, admin_location_path(loc))                               }
+                      column("City")    {|loc| text_node "#{loc.city}, #{loc.state}" }
+                      column("Dishes")  {|loc| text_node loc.restaurant.dishes.count                      }
                     end
         end
       end

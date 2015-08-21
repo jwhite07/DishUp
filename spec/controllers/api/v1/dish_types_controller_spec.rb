@@ -5,7 +5,7 @@ RSpec.describe Api::V1::DishTypesController, type: :controller do
   describe "GET #index" do
     before(:each) do
       4.times do 
-        FactoryGirl.create :dish_type
+        FactoryGirl.create :dish_type_with_dishes
       end
       get :index
     end

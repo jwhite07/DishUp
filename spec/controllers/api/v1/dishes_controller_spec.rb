@@ -33,7 +33,7 @@ RSpec.describe Api::V1::DishesController, type: :controller do
     before(:each) do
       dishes = []
       4.times do 
-        dishes << FactoryGirl.create(:dish)
+        dishes << FactoryGirl.create(:standalone_dish)
       end
       get :index
     end

@@ -5,7 +5,7 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
     before(:each) do
       restaurants = []
       4.times do 
-        restaurants << FactoryGirl.create(:restaurant)
+        restaurants << FactoryGirl.create(:restaurant_with_dishes)
       end
       get :index
     end

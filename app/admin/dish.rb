@@ -1,5 +1,5 @@
 ActiveAdmin.register Dish do
-  permit_params :id, :name, :price, :description, :restaurant_id, :rating, dish_type_ids: [], dishpics_attributes: [:id, :url, :caption, :user_id]
+  permit_params :id, :name, :price, :description, :restaurant_id, :rating,  dish_type_ids: [], dishpics_attributes: [:id, :url, :caption, :user_id]
   show do
     panel "Details" do
       attributes_table_for dish do
@@ -48,6 +48,7 @@ ActiveAdmin.register Dish do
       f.input :description
       f.input :price
       f.input :dish_types, :as => :check_boxes  
+      
     end
     f.inputs do
       f.has_many :dishpics, new_record: 'Create DishPic' do |dishpic|

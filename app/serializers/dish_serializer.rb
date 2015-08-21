@@ -1,5 +1,5 @@
 class DishSerializer < ActiveModel::Serializer
-  attributes :id, :name, :price, :rating, :description,  :updated_at, :user_rating, :restaurant
+  attributes :id, :name, :price, :rating, :description,  :updated_at, :user_rating, :location
   has_many :dishpics, serializer: DishpicPreviewSerializer
   def user_rating
     user_rating = DishRating.where(user_id: @current_user).first

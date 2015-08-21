@@ -1,4 +1,5 @@
 class Dish < ActiveRecord::Base
+  default_scope {order("rating DESC")}
   after_save :add_to_default_menu
   belongs_to :restaurant, :counter_cache => :dishes_count
   
@@ -6,8 +7,10 @@ class Dish < ActiveRecord::Base
   has_many :dish_types, :through => :dishes_dish_types
   accepts_nested_attributes_for :dish_types
   
-  has_many :dishes_menus
-  has_many :menus, :through => :dishes_menus
+  has_many :dish_menu_sections
+  has_many :menu_sections, :through => :dish_menu_sections
+  has_many :menu_menu_sections, :through => :menu_sections
+  has_many :menus, :through => :menu_menu_sections
   
   has_many :dishes_ingredients
   has_many :ingredients, :through => :dishes_ingredients

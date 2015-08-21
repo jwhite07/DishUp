@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :dishpic do
     url "dishpic.jpg"
     quality_score {rand(100...500) * 1.0 / 100}
-    dish
+    association :dish, factory: :standalone_dish
     
     factory :dishpic_with_ratings do
       transient do

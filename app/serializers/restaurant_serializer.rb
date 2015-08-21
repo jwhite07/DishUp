@@ -1,5 +1,5 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name, :address, :city, :state, :postal_code, :logo, :premium_level, :phone_number, :website, :distance
+  attributes :id, :name, :premium_level
   
   def distance
     if object.respond_to? :distance

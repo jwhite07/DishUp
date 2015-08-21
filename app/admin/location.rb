@@ -1,5 +1,5 @@
-ActiveAdmin.register DishType do
-
+ActiveAdmin.register Location do
+  permit_params :name, :address, :city, :state, :country, :postal_code, :logo,  :phone, :website
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -12,7 +12,6 @@ ActiveAdmin.register DishType do
 #   permitted << :other if resource.something?
 #   permitted
 # end
-  permit_params :name, :description, :icon_url, :sort_order
-
+  
 
 end

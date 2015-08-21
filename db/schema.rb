@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811163314) do
+ActiveRecord::Schema.define(version: 20150821151331) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -74,6 +74,16 @@ ActiveRecord::Schema.define(version: 20150811163314) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "dish_menu_sections", force: :cascade do |t|
+    t.integer  "dish_id"
+    t.integer  "menu_section_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "dish_menu_sections", ["dish_id"], name: "index_dish_menu_sections_on_dish_id"
+  add_index "dish_menu_sections", ["menu_section_id"], name: "index_dish_menu_sections_on_menu_section_id"
+
   create_table "dish_types", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
@@ -81,6 +91,7 @@ ActiveRecord::Schema.define(version: 20150811163314) do
     t.datetime "updated_at",               null: false
     t.string   "icon_url"
     t.integer  "dishes_count", default: 0
+    t.integer  "sort_order",   default: 0
   end
 
   create_table "dishes", force: :cascade do |t|
@@ -112,14 +123,6 @@ ActiveRecord::Schema.define(version: 20150811163314) do
   add_index "dishes_ingredients", ["dish_id"], name: "index_dishes_ingredients_on_dish_id"
   add_index "dishes_ingredients", ["ingredient_id"], name: "index_dishes_ingredients_on_ingredient_id"
 
-  create_table "dishes_menus", force: :cascade do |t|
-    t.integer "dish_id"
-    t.integer "menu_id"
-  end
-
-  add_index "dishes_menus", ["dish_id"], name: "index_dishes_menus_on_dish_id"
-  add_index "dishes_menus", ["menu_id"], name: "index_dishes_menus_on_menu_id"
-
   create_table "dishpics", force: :cascade do |t|
     t.integer  "dish_id"
     t.integer  "favorites",     default: 0
@@ -149,6 +152,49 @@ ActiveRecord::Schema.define(version: 20150811163314) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "postal_code"
+    t.integer  "restaurant_id"
+    t.string   "logo"
+    t.string   "website"
+    t.string   "phone_number"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.float    "latitude"
+    t.float    "longitude"
+  end
+
+  add_index "locations", ["latitude"], name: "index_locations_on_latitude"
+  add_index "locations", ["longitude"], name: "index_locations_on_longitude"
+  add_index "locations", ["restaurant_id"], name: "index_locations_on_restaurant_id"
+
+  create_table "menu_menu_sections", force: :cascade do |t|
+    t.integer  "menu_id"
+    t.integer  "menu_section_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "menu_menu_sections", ["menu_id"], name: "index_menu_menu_sections_on_menu_id"
+  add_index "menu_menu_sections", ["menu_section_id"], name: "index_menu_menu_sections_on_menu_section_id"
+
+  create_table "menu_sections", force: :cascade do |t|
+    t.integer  "restaurant_id"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "sort_order"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "display_name"
+  end
+
+  add_index "menu_sections", ["restaurant_id"], name: "index_menu_sections_on_restaurant_id"
+
   create_table "menus", force: :cascade do |t|
     t.string   "name"
     t.integer  "restaurant_id"
@@ -176,20 +222,10 @@ ActiveRecord::Schema.define(version: 20150811163314) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "country"
-    t.string   "postal_code"
-    t.string   "logo"
     t.string   "premium_level"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.string   "phone_number"
-    t.string   "website"
     t.string   "hours"
-    t.float    "latitude"
-    t.float    "longitude"
     t.integer  "dishes_count",  default: 0
   end
 

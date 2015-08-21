@@ -8,7 +8,7 @@ FactoryGirl.define do
       end
       after(:create) do |dish_type, evaluator|
         #create_list(:dish, evaluator.dishes_count, dish_type: dish_type)
-        dish_type.dishes << create_list(:dish, evaluator.dishes_count)
+        dish_type.dishes << create_list(:standalone_dish, evaluator.dishes_count)
         dish_type.save
       end
     end    
