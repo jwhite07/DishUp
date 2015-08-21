@@ -25,7 +25,8 @@ Rails.application.routes.draw do
       resources :restaurants, :only => [:index] do
         resources :dishes, :only => [:index]
       end
-      resources :locations, :only => [:index]
+      resources :locations, :only => [:index] 
+    
       
     end
   end
