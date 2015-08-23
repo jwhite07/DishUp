@@ -75,7 +75,9 @@ group :production do
   gem 'rails_12factor'
 end
 #api gems
-gem 'active_model_serializers'
-
+gem 'active_model_serializers', '~> 0.10.0.rc2'
 gem 'json'
 gem 'geocoder'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
