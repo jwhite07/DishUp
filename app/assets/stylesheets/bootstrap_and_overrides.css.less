@@ -11,6 +11,8 @@
 @fontAwesomeTtfPath: font-url("fontawesome-webfont.ttf");
 @fontAwesomeSvgPath: font-url("fontawesome-webfont.svg#fontawesomeregular");
 
+//Dishup styles
+@du_orange: #d87871;
 // Font Awesome
 @import "fontawesome/font-awesome";
 
@@ -27,11 +29,30 @@
 //
 // Example:
 // @link-color: #ff0000;
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,300italic,400italic);
 body{
 	font-family: "Source Sans Pro";
 	
 }
+
+.navbar{
+	margin: 0;
+	height: 6vh;
+	position: fixed;
+	width: 100%
+}
+.navbar-collapse{
+	float: right;
+	a {
+		color: #a4a4a4;
+		font-weight: 300;
+		text-decoration: none;
+	}
+}
+.container-fluid{
+	padding: 0;
+}
+
 .content{
 	position: relative;
 	
@@ -50,19 +71,19 @@ body{
 		height: 94vh;
 	}
 }
-.navbar{
-	margin: 0;
-	height: 6vh;
-	position: fixed;
-	width: 100%
-}
-.container-fluid{
-	padding: 0;
-}
 .parallax_group{
 	height: 94vh;
 	position: absolute;
 	width: 100%
+}
+#body-content a{
+	
+	float: left;
+	padding: 5px 30px;
+	margin: 2em 20px 0 0;
+	color: @du_orange;
+	border: 2px solid @du_orange;
+	text-decoration: none;
 }
 #section1{
 	background: #f1f1f2;
@@ -70,26 +91,34 @@ body{
 	position: relative;
 	top: 0;
 	h2 {
-		color: #d87871;
-		font-size: 6.5em;
+		color: @du_orange;
+		font-size: 9em;
 		font-weight:300;
 		margin: 0;
 		line-height: 0.8em;
 	}
 	h3{
-		color: #d87871;
+		color: @du_orange;
 		font-weight:200;
-		margin: 0
+		margin: 0;
+		line-height: 1.5em;
+		font-size: 3em;
 	}
 	#hero_text{
 		
-		position: fixed;
-		z-index: 10
+		position: absolute;
+		z-index: 0;
+		top: 10%;
+		left: 10%;
+		#watch span{
+			margin-right: 6px
+		}
 	}
 	#hero_hand{
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		z-index: 1;
 		
 	}
 }
@@ -97,16 +126,20 @@ body{
 #section2{
 	top: 94vh;
 	background: #fff;
+	z-index: 10;
 }
 #section3{
 	top: 200vh;
 	background: #f1f1f2;
+	z-index: 20;
 }
 #section4{
 	top: 300vh;
 	background: url("section4_bg.png");
+	z-index: 30;
 }
 #section5{
 	top: 400vh;
 	background: #fff;
+	z-index: 40;
 }
