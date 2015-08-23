@@ -29,9 +29,12 @@
 //
 // Example:
 // @link-color: #ff0000;
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,300italic,200italic);
 body{
 	font-family: "Source Sans Pro";
+	font-size: 2.5em;
+	color: #c2c2c2;
+	font-weight: 300;
 	
 }
 
@@ -92,7 +95,7 @@ body{
 	top: 0;
 	h2 {
 		color: @du_orange;
-		font-size: 9em;
+		font-size: 5em;
 		font-weight:300;
 		margin: 0;
 		line-height: 0.8em;
@@ -102,7 +105,7 @@ body{
 		font-weight:200;
 		margin: 0;
 		line-height: 1.5em;
-		font-size: 3em;
+		font-size: 1.5em;
 	}
 	#hero_text{
 		
@@ -127,19 +130,96 @@ body{
 	top: 94vh;
 	background: #fff;
 	z-index: 10;
+	img{
+		position: absolute;
+		bottom: -150px;
+	}
+	p{
+		position: absolute;
+		left: 40%;
+		top: 45%;
+		
+	}
 }
 #section3{
 	top: 200vh;
 	background: #f1f1f2;
 	z-index: 20;
+	img{
+		position: absolute;
+		bottom: -150px;
+		right: 0;
+	}
+	p{
+		position: absolute;
+		left: 5%;
+		top: 45%;
+		right: 55%;
+		
+	}
 }
 #section4{
 	top: 300vh;
-	background: url("section4_bg.png");
+	
 	z-index: 30;
+	
 }
-#section5{
-	top: 400vh;
+#bgimagepanel{
+	background: url(du_iphone_table.jpg) no-repeat center top #120903;
+	height:59vh;
+	.clearfix();
+	text-align: center;
+	p{
+		color: #fff;
+		font-style: italic;
+		font-weight: 200;
+		
+		
+		margin: 20% 15% 5%;
+		
+		
+	}
+	a{
+		color: #fff;
+		border-color: #fff;
+		margin: auto;
+		display: inline-block;
+		float: none;
+	}
+	.content{
+		height: 59vh;
+	}
+}
+#email_form{
+	height: 20vh;
+	width: 100%;
 	background: #fff;
-	z-index: 40;
+	text-align: center;
+	.clearfix();
+	p{
+		margin: 30px 10%;
+	}
+	.content{
+		height: 20vh;
+		
+	}
+	.input-group{
+		width: 50%;
+		margin: auto;
+		input{
+			border: none;
+			background: #f6f6f6;
+		}
+		.btn{
+			background: @du_orange;
+			color: #fff;
+			font-family: "Source Sans Pro";
+			font-weight: 300;
+			
+		}
+	}
+}
+footer{
+	height: 15vh;
+	background: #474747;
 }
