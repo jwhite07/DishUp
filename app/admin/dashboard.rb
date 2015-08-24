@@ -49,9 +49,16 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
       column do
-        panel "Download Latest iOS Build" do
+        panel "Download Stable Build" do
           
             link_to 'Install Stable App', "itms-services://?action=download-manifest&url=https://dishupapp.herokuapp.com/manifest-v0-1.plist"
+            
+          
+         
+        end
+        panel "Download Stable Build" do
+          
+            
             link_to 'Install Edge App', "itms-services://?action=download-manifest&url=https://dishupapp.herokuapp.com/manifest.plist"
           
          
