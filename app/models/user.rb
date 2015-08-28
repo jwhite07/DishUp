@@ -8,8 +8,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  validates :email,  presence: true     
-  validates :email, uniqueness: true
+  
+  validates :email, uniqueness:  true, allow_nil: true
+  validates :ex_user_id, uniqueness:  true, allow_nil: true
   validates :auth_token, uniqueness: true
   
   before_create :generate_authentication_token!
