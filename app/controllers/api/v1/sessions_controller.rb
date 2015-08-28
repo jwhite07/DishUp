@@ -10,7 +10,7 @@ class Api::V1::SessionsController < ApplicationController
       user = User.find_by(ex_user_id: ex_user_id)
     end
     if user == nil
-      render json: { errors: "Invalid email or password" }, status: 422
+      render json: { errors: "Invalid email or password", code: 2}, status: 422
     elsif  user.valid_password? user_password
       sign_in user, store: false
       user.generate_authentication_token!
