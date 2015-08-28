@@ -9,7 +9,7 @@ class Api::V1::SessionsController < ApplicationController
     elsif ex_user_id.present?
       user = User.find_by(ex_user_id: ex_user_id)
     end
-    if user.valid_password? user_password
+    if user && user.valid_password? user_password
       sign_in user, store: false
       user.generate_authentication_token!
       user.save
