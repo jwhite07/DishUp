@@ -7,9 +7,11 @@ class Api::V1::UsersController < ApplicationController
   def create
     
     user = User.new(user_params)
-    pw = User.generate_password!
-    user.password = pw
-    user.password_confirmation = pw
+    if !user_params[:password]
+      pw = User.generate_password!
+      user.password = pw
+      user.password_confirmation = pw
+    end
     if user.save
       render json: user, status: 201, location: [:api, user]
     else
