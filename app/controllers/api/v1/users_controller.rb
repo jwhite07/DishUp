@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
     
     user = User.new(user_params)
     if !user_params[:password]
-      pw = User.generate_password!
+      pw = user.generate_password!
       user.password = pw
       user.password_confirmation = pw
     end
