@@ -38,7 +38,7 @@ class Api::V1::SessionsController < ApplicationController
         user.ex_token = ex_token
         user.save
         render json: user, status: 200, location: [:api, user]
-        
+      end
     end
   end
   def destroy
