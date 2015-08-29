@@ -12,7 +12,15 @@ class User < ActiveRecord::Base
   validates :email, uniqueness:  true, allow_nil: true
   validates :ex_user_id, uniqueness:  true, allow_nil: true
   validates :auth_token, uniqueness: true
-  
+  def email_required?
+    false
+  end
+  def email_changed?
+    false
+  end
+  def generate_password!
+    Devise.friendly_token
+  end
   before_create :generate_authentication_token!
   
   def generate_authentication_token!
