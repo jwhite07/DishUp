@@ -74,6 +74,7 @@ ActiveAdmin.register Restaurant do
       f.has_many :menus, new_record: 'New Menu' do |m|
         m.input :name
         m.input :default
+        m.input :special_event
         m.input :sections, :as => :check_boxes, :collection => restaurant.menu_sections, :member_label => :name
       end
     end
@@ -85,6 +86,7 @@ ActiveAdmin.register Restaurant do
         ms.input :dishes, :as => :check_boxes, :collection => restaurant.dishes
       end
     end
+    
     
         
     

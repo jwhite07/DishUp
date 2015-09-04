@@ -28,6 +28,9 @@ Rails.application.routes.draw do
         resources :dishes, :only => [:index]
       end
       resources :locations, :only => [:index] 
+      resources :special_events, :only => [:index] do
+        resources :locations, :only => [:index]
+      end
     
       
     end
