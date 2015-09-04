@@ -1,7 +1,7 @@
 ActiveAdmin.register Restaurant do
   permit_params :name,  :premium_level, :hours, 
     locations_attributes: [:id, :name, :address, :city, :state, :country, :postal_code, :website, :phone_number],
-    menus_attributes: [:id, :name, :default, menu_section_ids: [] ],
+    menus_attributes: [:id, :name, :default, :special_event_id, menu_section_ids: [] ],
     menu_sections_attributes: [:id, :name, :display_name, :description, dish_ids: []]
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
