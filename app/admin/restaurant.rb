@@ -75,7 +75,7 @@ ActiveAdmin.register Restaurant do
         m.input :name
         m.input :default
         m.input :special_event
-        m.input :sections, :as => :check_boxes, :collection => restaurant.menu_sections, :member_label => :name
+        m.input :menu_sections, :as => :check_boxes, :collection => restaurant.menu_sections, :member_label => :name
       end
     end
     f.inputs do 
