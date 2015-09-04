@@ -7,6 +7,8 @@ class Api::V1::DishesController < ApplicationController
     elsif params[:restaurant_id]
       
       respond_with Restaurant.find(params[:restaurant_id]).dishes, each_serializer: DishPreviewSerializer, serializer_params: serializer_params
+    elsif params[:menu_id]
+      respond_with Menu.find(params[:menu_id]).dishes, each_serializer: DishPreviewSerializer, serializer_params: serializer_params
     else
       render json: Dish.all, each_serializer: DishPreviewSerializer, serializer_params: serializer_params
     end

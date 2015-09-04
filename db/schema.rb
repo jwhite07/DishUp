@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821205722) do
+ActiveRecord::Schema.define(version: 20150904185846) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -73,16 +73,6 @@ ActiveRecord::Schema.define(version: 20150821205722) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  create_table "dish_menu_sections", force: :cascade do |t|
-    t.integer  "dish_id"
-    t.integer  "menu_section_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  add_index "dish_menu_sections", ["dish_id"], name: "index_dish_menu_sections_on_dish_id"
-  add_index "dish_menu_sections", ["menu_section_id"], name: "index_dish_menu_sections_on_menu_section_id"
 
   create_table "dish_types", force: :cascade do |t|
     t.string   "name"
@@ -173,15 +163,17 @@ ActiveRecord::Schema.define(version: 20150821205722) do
   add_index "locations", ["longitude"], name: "index_locations_on_longitude"
   add_index "locations", ["restaurant_id"], name: "index_locations_on_restaurant_id"
 
-  create_table "menu_menu_sections", force: :cascade do |t|
+  create_table "menu_assignments", force: :cascade do |t|
     t.integer  "menu_id"
     t.integer  "menu_section_id"
+    t.integer  "dish_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  add_index "menu_menu_sections", ["menu_id"], name: "index_menu_menu_sections_on_menu_id"
-  add_index "menu_menu_sections", ["menu_section_id"], name: "index_menu_menu_sections_on_menu_section_id"
+  add_index "menu_assignments", ["dish_id"], name: "index_menu_assignments_on_dish_id"
+  add_index "menu_assignments", ["menu_id"], name: "index_menu_assignments_on_menu_id"
+  add_index "menu_assignments", ["menu_section_id"], name: "index_menu_assignments_on_menu_section_id"
 
   create_table "menu_sections", force: :cascade do |t|
     t.integer  "restaurant_id"
@@ -198,12 +190,14 @@ ActiveRecord::Schema.define(version: 20150821205722) do
   create_table "menus", force: :cascade do |t|
     t.string   "name"
     t.integer  "restaurant_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.boolean  "default",       default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "default",          default: false
+    t.integer  "special_event_id"
   end
 
   add_index "menus", ["restaurant_id"], name: "index_menus_on_restaurant_id"
+  add_index "menus", ["special_event_id"], name: "index_menus_on_special_event_id"
 
   create_table "ratings", force: :cascade do |t|
     t.integer  "rating"
@@ -227,6 +221,28 @@ ActiveRecord::Schema.define(version: 20150821205722) do
     t.datetime "updated_at",                null: false
     t.string   "hours"
     t.integer  "dishes_count",  default: 0
+  end
+
+  create_table "special_event_assignments", force: :cascade do |t|
+    t.integer  "special_event_id"
+    t.integer  "restaurant_id"
+    t.integer  "menu_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "special_event_assignments", ["menu_id"], name: "index_special_event_assignments_on_menu_id"
+  add_index "special_event_assignments", ["restaurant_id"], name: "index_special_event_assignments_on_restaurant_id"
+  add_index "special_event_assignments", ["special_event_id"], name: "index_special_event_assignments_on_special_event_id"
+
+  create_table "special_events", force: :cascade do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "name"
+    t.boolean  "launch_screen"
+    t.string   "website"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "user_ingredient_preferences", force: :cascade do |t|
@@ -263,6 +279,9 @@ ActiveRecord::Schema.define(version: 20150821205722) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.string   "auth_token",             default: ""
+    t.string   "ex_user_id"
+    t.string   "ex_source"
+    t.string   "ex_token"
   end
 
   add_index "users", ["auth_token"], name: "index_users_on_auth_token", unique: true

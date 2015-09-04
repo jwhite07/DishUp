@@ -16,5 +16,19 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
     it {should respond_with 200}
     
   end
+  describe "special_events/n/restaurants GET #index" do
+    before(:each) do
+      special_events = []
+      4.times do 
+        special_events << FactoryGirl.create(:special_event_with_menus)
+      end
+      get :index, {:special_event_id => special_events[rand(0...3)].id}
+    end
+    it "returns 4 restaurants from the database" do
+      restaurants_response = json_response
+      expect(restaurants_response[:restaurants].length).to eq(4)
+    end
+    it {should respond_with 200}
+  end
 
 end

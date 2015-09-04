@@ -11,47 +11,19 @@ AdminUser.create!(email: 'jwhite@eliteworx.com', password: 'password', password_
 restaurants         = [
   {
     "name"          => "Slows BBQ", 
-    "address"       => "2138 Michigan Avenue", 
-    "city"          => "Detroit", 
-    "state"         => "MI", 
-    "country"       => "USA", 
-    "postal_code"   => "48216", 
-    "logo"          => "http://slowsbarbq.com/sites/slowsbarbq.com/files/logo.png",
-    "premium_level" => "partner"
-  },
-  {
-    "name"          => "Green Dot Stables", 
-    "address"       => "2200 W Lafayette Blvd", 
-    "city"          => "Detroit", 
-    "state"         => "MI", 
-    "country"       => "USA", 
-    "postal_code"   => "48216", 
-    "logo"          => "http://greendotstables.com/wp-content/uploads/2011/09/logo-greendot1.png",
-    "premium_level" => "member"
-  },
-  {
-    "name"          => "Crispellis Bakery & Pizza", 
-    "address"       => "6690 Orchard Lake Rd", 
-    "city"          => "West Bloomfield Township", 
-    "state"         => "MI", 
-    "country"       => "USA", 
-    "postal_code"   => "48322", 
-    "logo"          => "http://crispellis.com/wp-content/uploads/2014/08/LOGO_200x61.png",
-    "premium_level" => "listed"
-  }
-]
-
-restaurants.each do |restaurant|
-  #puts restaurant
-  r = Restaurant.create!(restaurant)
-  puts r
-end
-
-Restaurant.all.each do |rest|
-  Menu.create! ({:name              => rest.name, :restaurant_id => rest.id})
-end
-
-slows_dishes  = [
+    "premium_level" => "partner",
+    "locations" => [
+      {
+        "name"          => "Slows BBQ", 
+        "address"       => "2138 Michigan Avenue", 
+        "city"          => "Detroit", 
+        "state"         => "MI", 
+        "country"       => "USA", 
+        "postal_code"   => "48216", 
+        "logo"          => "http://slowsbarbq.com/sites/slowsbarbq.com/files/logo.png"
+      }
+    ],
+    "dishes"      => [
   {
     "name"        => "BBQ Wings", 
     "price"       => 9.95, 
@@ -170,8 +142,23 @@ slows_dishes  = [
     ]
   }
 ]
-
-greendot_dishes   = [
+  },
+  {
+    "name"          => "Green Dot Stables", 
+    "premium_level" => "partner",
+    "locations"     => [
+      {
+        "name"          => "Green Dot Stables", 
+        "address"       => "2200 W Lafayette Blvd", 
+        "city"          => "Detroit", 
+        "state"         => "MI", 
+        "country"       => "USA", 
+        "postal_code"   => "48216", 
+        "logo"          => "http://greendotstables.com/wp-content/uploads/2011/09/logo-greendot1.png"
+        
+      }
+    ],
+    "dishes"        => [
   
   {
     "name"        => "Quinoa Burger Slider",
@@ -329,8 +316,25 @@ greendot_dishes   = [
       "Parsley"
     ]
   }
-]  
-crispellis_dishes = [
+]   
+    
+  },
+  {
+    "name"          => "Crispellis Bakery & Pizza", 
+    "premium_level" => "listed",
+    "locations" => [
+      {
+        "name"          => "Crispellis Bakery & Pizza", 
+        "address"       => "6690 Orchard Lake Rd", 
+        "city"          => "West Bloomfield Township", 
+        "state"         => "MI", 
+        "country"       => "USA", 
+        "postal_code"   => "48322", 
+        "logo"          => "http://crispellis.com/wp-content/uploads/2014/08/LOGO_200x61.png"
+        
+      }
+    ],
+    "dishes"      => [
   {
     "name"        => "Crispelli Salad",
     "price"       => 5.25,
@@ -498,31 +502,50 @@ crispellis_dishes = [
   }
   
 ] 
+  }
+]
 
-
-dishes = slows_dishes + greendot_dishes + crispellis_dishes
-
-dishes.each do |dish|
-  dish["rating"] = rand(100...500) * 1.0 / 100
-  dishatts  = [ "name", "price", "description", "rating" ]
-  d = dish.slice(*dishatts)
-  new_dish = Dish.create!(d)
-  #Create or find DishType and association to this dish
-  if dish["dish_types"]
-    dish["dish_types"].each do |dt|
-      dish_type = DishType.where(:name => dt).first_or_create
-      DishesDishType.create!(:dish_id => new_dish.id, :dish_type_id => dish_type.id)
+restaurants.each do |restaurant|
+  #puts restaurant
+  r = Restaurant.create!({:name => restaurant["name"], :premium_level => restaurant["premium_level"]})
+  restaurant["locations"][0]["restaurant"] = r 
+  l = Location.create!(restaurant["locations"][0] )
+  restaurant["dishes"].each do |dish|
+    dish["rating"] = rand(100...500) * 1.0 / 100
+    dishatts  = [ "name", "price", "description", "rating" ]
+    d = dish.slice(*dishatts)
+    d["restaurant"] = r
+    new_dish = Dish.create!(d)
+    #Create or find DishType and association to this dish
+    if dish["dish_types"]
+      dish["dish_types"].each do |dt|
+        dish_type = DishType.where(:name => dt).first_or_create
+        DishesDishType.create!(:dish_id => new_dish.id, :dish_type_id => dish_type.id)
+      end
+    end
+  
+    #Create or find Ingredients and associations to this dish
+    if dish["ingredients"]  
+      dish["ingredients"].each do |ing|
+        ingredient = Ingredient.where(:name => ing).first_or_create
+        DishesIngredient.create!(:dish_id => new_dish.id, :ingredient_id => ingredient.id)
+      end
     end
   end
   
-  #Create or find Ingredients and associations to this dish
-  if dish["ingredients"]  
-    dish["ingredients"].each do |ing|
-      ingredient = Ingredient.where(:name => ing).first_or_create
-      DishesIngredient.create!(:dish_id => new_dish.id, :ingredient_id => ingredient.id)
-    end
-  end
+  puts r
 end
+
+Restaurant.all.each do |rest|
+  Menu.create! ({:name              => rest.name, :restaurant_id => rest.id})
+end
+
+
+
+
+
+
+
 
 
 50.times do

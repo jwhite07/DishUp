@@ -18,6 +18,20 @@ FactoryGirl.define do
         restaurant.dishes << create_list(:dish, evaluator.dishes_count, restaurant: restaurant)
         restaurant.save
       end
-    end    
+    end 
+    factory :restaurant_with_special_event_menu do
+      transient do
+        dishes_count 5
+      end
+      after(:create) do |restaurant, evaluator|
+        restaurant.dishes << create_list(:dish, evaluator.dishes_count, restaurant: restaurant)
+        restaurant.save
+        
+        menu = create(:menu)
+        menu.dishes << restaurant.dishes
+        menu.save
+        
+      end
+    end       
   end
 end

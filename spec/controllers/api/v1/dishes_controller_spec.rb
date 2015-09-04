@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Api::V1::DishesController, type: :controller do
-  describe "dish_type/n/dishes GET #index" do
+  describe "dish_types/n/dishes GET #index" do
     before(:each) do
       dish_types = []
       4.times do 
@@ -11,11 +11,11 @@ RSpec.describe Api::V1::DishesController, type: :controller do
     end
     it "returns 5 dishes from the database" do
       dishes_response = json_response
-      expect(dishes_response[:dishes].length).to eq(5)
+      expect(dishes_response[:dish_previews].length).to eq(5)
     end
     it {should respond_with 200}
   end
-  describe "restaurant/n/dishes GET #index" do
+  describe "restaurants/n/dishes GET #index" do
     before(:each) do
       restaurants = []
       4.times do 
@@ -25,7 +25,23 @@ RSpec.describe Api::V1::DishesController, type: :controller do
     end
     it "returns 5 dishes from the database" do
       dishes_response = json_response
-      expect(dishes_response[:dishes].length).to eq(5)
+      
+      expect(dishes_response[:dish_previews].length).to eq(5)
+    end
+    it {should respond_with 200}
+  end
+  describe "menus/n/dishes GET #index" do
+    before(:each) do
+      menus = []
+      4.times do 
+        menus << FactoryGirl.create(:menu_with_dishes)
+      end
+      get :index, {:menu_id => menus[rand(0...3)].id}
+    end
+    it "returns 5 dishes from the database" do
+      dishes_response = json_response
+      
+      expect(dishes_response[:dish_previews].length).to eq(5)
     end
     it {should respond_with 200}
   end
@@ -39,7 +55,7 @@ RSpec.describe Api::V1::DishesController, type: :controller do
     end
     it "returns 4 dishes from the database" do
       dishes_response = json_response
-      expect(dishes_response[:dishes].length).to eq(4)
+      expect(dishes_response[:dish_previews].length).to eq(4)
     end
     it {should respond_with 200}
   end
