@@ -10,7 +10,7 @@ describe Api::V1::SessionsController do
     context "when the credentials are correct" do
 
       before(:each) do
-        credentials = { email: @user.email, password: "12345678" }
+        credentials = { email: @user.email, password: "12345678", ex_source: "du" }
         post :create, { session: credentials }
       end
 
@@ -26,7 +26,7 @@ describe Api::V1::SessionsController do
     context "when the credentials are incorrect" do
 
       before(:each) do
-        credentials = { email: @user.email, password: "invalidpassword" }
+        credentials = { email: @user.email, password: "invalidpassword", ex_source: "du" }
         post :create, { session: credentials }
       end
 
