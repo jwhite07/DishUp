@@ -3,7 +3,6 @@ class Api::V1::LocationsController < ApplicationController
   def index
     locations = []
     
-    
   
     if params["latitude"] && params["longitude"] 
       if params[:special_event_id]
