@@ -1,11 +1,13 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name, :premium_level
+  attributes :id, :name, :premium_level, :menu_id
+   
   
-  def distance
-    if object.respond_to? :distance
-      return object.distance
+  
+  def menu_id
+    if scope[:special_event_id]
+      SpecialEvent.find(scope[:special_event_id]).menus.where(restaurant_id: object.id)
     else
-      return ""
+      object.default_menu.id
     end
   end
  

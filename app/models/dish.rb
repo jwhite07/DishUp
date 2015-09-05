@@ -8,7 +8,7 @@ class Dish < ActiveRecord::Base
   accepts_nested_attributes_for :dish_types
   
   has_many :menu_assignments
-  has_many :menus, -> {where("restaurant_id = ? ", object.restaurant_id)}, :through => :menu_assignments
+  has_many :menus, -> (object) {where("restaurant_id = ? ", object.restaurant_id)}, :through => :menu_assignments
   has_many :menu_sections, :through => :menu_assignments
    
   

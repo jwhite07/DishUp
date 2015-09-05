@@ -24,7 +24,9 @@ class Restaurant < ActiveRecord::Base
       menu.save!
     end
   end
-  
+  def default_menu
+    Menu.where(restaurant_id: self.id, default: true).first
+  end
   # def self.import_from_json_file(filename)
 #     file = File.read(File.join(Rails.root, filename))
 #     restaurants = JSON.parse(file)

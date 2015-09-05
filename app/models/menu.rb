@@ -3,7 +3,7 @@ class Menu < ActiveRecord::Base
   belongs_to :special_event
   
   has_many :menu_assignments
-  has_many :dishes, -> {where("restaurant_id = ? ", object.restaurant_id)}, :through => :menu_assignments
+  has_many :dishes, -> (object) {where("restaurant_id = ? ", object.restaurant_id)}, :through => :menu_assignments
   has_many :menu_sections, :through => :menu_assignments
   
     
