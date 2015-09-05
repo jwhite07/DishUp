@@ -1,4 +1,5 @@
 class DishPreviewSerializer < ActiveModel::Serializer
+  cache key: "dish", expires_in: 1.hours
   attributes :id, :name, :price, :rating, :description, :updated_at, :user_rating, :lead_dishpic_url
   
   def user_rating
