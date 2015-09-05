@@ -4,6 +4,7 @@ class Api::V1::RestaurantsController < ApplicationController
     restaurants = []
     if params[:special_event_id]
       restaurants = SpecialEvent.find(params[:special_event_id]).restaurants.only_with_dishes
+       logger.debug "restaurants: #{restaurants.count}"
     else
       restaurants = Restaurant.only_with_dishes
     end
