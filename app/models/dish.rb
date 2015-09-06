@@ -7,10 +7,10 @@ class Dish < ActiveRecord::Base
   has_many :dish_types, :through => :dishes_dish_types
   accepts_nested_attributes_for :dish_types
   
-  has_many :menu_assignments
-  has_many :menus, -> (object) {where("restaurant_id = ? ", object.restaurant_id)}, :through => :menu_assignments
-  has_many :menu_sections, :through => :menu_assignments
-   
+  has_many :dish_menu_sections
+  has_many :menu_sections, -> {uniq}, :through => :dish_menu_sections
+  has_many :menu_menu_sections, :through => :menu_sections
+  has_many :menus, -> {uniq}, :through => :menu_menu_sections
   
   
   has_many :dishes_ingredients
@@ -34,7 +34,10 @@ class Dish < ActiveRecord::Base
   def add_to_default_menu
     default_menu = Menu.where(restaurant_id: self.restaurant.id).first_or_create!
     default_section = MenuSection.where(restaurant_id: self.restaurant.id ).first_or_create!
-    MenuAssignment.where(menu_id: default_menu.id, menu_section_id: default_section.id, dish_id: self.id).first_or_create!
+    default_menu.menu_sections << default_section if default_menu.menu_sections.count == 0
+    
+    
+    default_section.dishes << self
   end
   def self.import_from_json(filename, user_id)
     file = File.read(File.join(Rails.root, filename))

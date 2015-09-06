@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :restaurant do
     name {FFaker::Company.name}
     transient do
-      location_count 3
+      location_count 1
     end
     after(:create)  do |r, e|
         r.locations << create_list(:location, e.location_count)

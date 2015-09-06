@@ -8,7 +8,8 @@ FactoryGirl.define do
           dishes_count 5
         end
         after(:create) do |menu, evaluator|
-          menu.dishes << create_list(:dish, evaluator.dishes_count, restaurant: menu.restaurant)
+          menu.menu_sections << create(:menu_section, restaurant: menu.restaurant)
+          
           menu.save
          end
       end

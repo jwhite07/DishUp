@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150904185846) do
+ActiveRecord::Schema.define(version: 20150906024840) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -73,6 +73,16 @@ ActiveRecord::Schema.define(version: 20150904185846) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "dish_menu_sections", force: :cascade do |t|
+    t.integer  "dish_id"
+    t.integer  "menu_section_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "dish_menu_sections", ["dish_id"], name: "index_dish_menu_sections_on_dish_id"
+  add_index "dish_menu_sections", ["menu_section_id"], name: "index_dish_menu_sections_on_menu_section_id"
 
   create_table "dish_types", force: :cascade do |t|
     t.string   "name"
@@ -163,17 +173,15 @@ ActiveRecord::Schema.define(version: 20150904185846) do
   add_index "locations", ["longitude"], name: "index_locations_on_longitude"
   add_index "locations", ["restaurant_id"], name: "index_locations_on_restaurant_id"
 
-  create_table "menu_assignments", force: :cascade do |t|
+  create_table "menu_menu_sections", force: :cascade do |t|
     t.integer  "menu_id"
     t.integer  "menu_section_id"
-    t.integer  "dish_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  add_index "menu_assignments", ["dish_id"], name: "index_menu_assignments_on_dish_id"
-  add_index "menu_assignments", ["menu_id"], name: "index_menu_assignments_on_menu_id"
-  add_index "menu_assignments", ["menu_section_id"], name: "index_menu_assignments_on_menu_section_id"
+  add_index "menu_menu_sections", ["menu_id"], name: "index_menu_menu_sections_on_menu_id"
+  add_index "menu_menu_sections", ["menu_section_id"], name: "index_menu_menu_sections_on_menu_section_id"
 
   create_table "menu_sections", force: :cascade do |t|
     t.integer  "restaurant_id"
