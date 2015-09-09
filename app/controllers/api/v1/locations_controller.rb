@@ -13,11 +13,17 @@ class Api::V1::LocationsController < ApplicationController
       
     else
       if params[:special_event_id]
+        se = SpecialEvent.find(params[:special_event_id])
+        
+        
         locations = SpecialEvent.find(params[:special_event_id]).locations.only_with_dishes
+        
+        
       else
         locations = Location.preload(:restaurant).only_with_dishes
       end
     end
+    
     respond_with locations, serializer_params: serializer_params
   end
   private

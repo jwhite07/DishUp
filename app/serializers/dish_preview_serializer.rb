@@ -1,6 +1,6 @@
 class DishPreviewSerializer < ActiveModel::Serializer
-  cache key: "dish", expires_in: 1.hours
-  attributes :id, :name, :price, :rating, :description, :updated_at, :user_rating, :lead_dishpic_url
+  cache key: "dishpreview", expires_in: 1.hours, except: [:special_event_id, :location_id]
+  attributes :id, :name, :price, :rating, :description, :updated_at, :user_rating, :lead_dishpic_url, :special_event_id, :location_id
   
   def user_rating
     user_rating = DishRating.where(user_id: @current_user).first if @current_user
@@ -10,5 +10,22 @@ class DishPreviewSerializer < ActiveModel::Serializer
       return user_rating.rating
     end
   end
+  def special_event_id
+    special_event_id = @options[:serializer_params][:special_event_id]
+    if special_event_id
+      special_event_id
+    else
+      nil
+    end
+  end
+  def location_id
+    special_event_id = @options[:serializer_params][:special_event_id]
+    if special_event_id
+      SpecialEvent.find(special_event_id).locations.first
+    else
+      nil
+    end
+  end
+  
   
 end

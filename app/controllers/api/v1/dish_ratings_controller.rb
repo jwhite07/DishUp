@@ -6,7 +6,7 @@ class Api::V1::DishRatingsController < ApplicationController
     dish_rating.dish_id = params[:dish_id]
     dish = dish_rating.dish
     if dish_rating.save
-      render json: dish, status: 201, location: [:api, dish]
+      render json: dish, status: 201, location: [:api, dish], serializer_params: serializer_params
     else
       render json: { errors: dish.errors }, status: 422
     end
@@ -17,7 +17,7 @@ class Api::V1::DishRatingsController < ApplicationController
     dish_rating.rating = rating_params[:rating]
     dish = dish_rating.dish
     if dish_rating.save
-      render json: dish, status: 200, location: [:api, dish]
+      render json: dish, status: 200, location: [:api, dish], serializer_params: serializer_params
     else
       render json: { errors: dish.errors }, status: 422
     end
@@ -28,5 +28,8 @@ class Api::V1::DishRatingsController < ApplicationController
       
       params.require(:dish_rating).permit(:rating, :dish_id)
       #logger.debug "Params:" 
+    end
+    def serializer_params
+      {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"]}
     end
 end

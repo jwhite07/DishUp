@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906024840) do
+ActiveRecord::Schema.define(version: 20150908110522) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -87,12 +87,15 @@ ActiveRecord::Schema.define(version: 20150906024840) do
   create_table "dish_types", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "icon_url"
-    t.integer  "dishes_count", default: 0
-    t.integer  "sort_order",   default: 0
+    t.integer  "dishes_count",     default: 0
+    t.integer  "sort_order",       default: 0
+    t.integer  "special_event_id"
   end
+
+  add_index "dish_types", ["special_event_id"], name: "index_dish_types_on_special_event_id"
 
   create_table "dishes", force: :cascade do |t|
     t.string   "name"
@@ -172,6 +175,11 @@ ActiveRecord::Schema.define(version: 20150906024840) do
   add_index "locations", ["latitude"], name: "index_locations_on_latitude"
   add_index "locations", ["longitude"], name: "index_locations_on_longitude"
   add_index "locations", ["restaurant_id"], name: "index_locations_on_restaurant_id"
+
+  create_table "locations_special_events", id: false, force: :cascade do |t|
+    t.integer "location_id",      null: false
+    t.integer "special_event_id", null: false
+  end
 
   create_table "menu_menu_sections", force: :cascade do |t|
     t.integer  "menu_id"

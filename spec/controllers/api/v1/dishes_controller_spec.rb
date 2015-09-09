@@ -71,15 +71,17 @@ RSpec.describe Api::V1::DishesController, type: :controller do
     end
     it "returns a dish from the database" do
       dishes_response = json_response
-      expect(dishes_response[:dish][:id]).to eq(@dish.id)
+      
+      expect(dishes_response[:dish][:dish_non_cached][:id]).to eq(@dish.id)
     end
     it "includes location details" do
       dishes_response = json_response
-      expect(dishes_response[:dish][:location][:id]).to eq(@dish.restaurant.locations.first.id)
+      
+      expect(dishes_response[:dish][:dish_non_cached][:location][:id]).to eq(@dish.restaurant.locations.first.id)
     end
     it "includes 5 dishpics" do
       dishes_response = json_response
-      expect(dishes_response[:dish][:dishpics].length).to eq(5)
+      expect(dishes_response[:dish][:dish_non_cached][:dishpics].length).to eq(5)
     end
     
     it {should respond_with 200}

@@ -11,6 +11,9 @@ FactoryGirl.define do
       after(:create) do |special_event, evaluator|
         
          create_list(:menu_with_dishes, evaluator.menus_count, special_event: special_event)
+         special_event.restaurants.each do |r|
+           special_event.locations << r.locations.first
+         end
         special_event.save
       end
     end    

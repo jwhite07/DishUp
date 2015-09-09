@@ -11,7 +11,8 @@ RSpec.describe Api::V1::DishTypesController, type: :controller do
     end
     it "returns 4 dish_types from the database" do
       dish_types_response = json_response
-      expect(dish_types_response[:dish_types].length).to eq(4)
+      #puts dish_types_response
+      expect(dish_types_response[:dish_types][0].length).to eq(4)
     end
     it {should respond_with 200}
   end

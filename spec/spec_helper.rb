@@ -69,4 +69,7 @@ RSpec.configure do |config|
   end
   
   config.include Devise::TestHelpers, :type => :controller
+  config.before(:all) do
+    Rails.cache.clear
+  end
 end

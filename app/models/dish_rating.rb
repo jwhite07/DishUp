@@ -8,6 +8,7 @@ class DishRating < Rating
   after_save :update_dish_rating
   private
     def update_dish_rating
+      
       dish = self.dish
       c = dish.dish_ratings.count
       sum = dish.dish_ratings.sum(:rating)

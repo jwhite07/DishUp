@@ -8,7 +8,8 @@ class LocationSerializer < ActiveModel::Serializer
     special_event_id = @options[:serializer_params][:special_event_id]
     if special_event_id
       
-      SpecialEvent.find(special_event_id).menus.where(restaurant_id: object.restaurant.id).first.id
+      menu = SpecialEvent.find(special_event_id).menus.where(restaurant_id: object.restaurant.id).first
+      menu.id if menu
     else
       object.restaurant.default_menu.id
     end

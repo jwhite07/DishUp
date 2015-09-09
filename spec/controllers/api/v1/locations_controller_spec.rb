@@ -26,7 +26,7 @@ RSpec.describe Api::V1::LocationsController, type: :controller do
     end
     it "returns 4 restaurants from the database" do
       locations_response = json_response
-      
+     
       expect(locations_response[:locations].length).to eq(4)
     end
     it {should respond_with 200}
