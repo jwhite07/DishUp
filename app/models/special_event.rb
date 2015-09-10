@@ -3,5 +3,7 @@ class SpecialEvent < ActiveRecord::Base
   has_many :restaurants, :through => :menus
   has_and_belongs_to_many :locations
   has_many :menus
+  has_many :dishes, :through => :menus
+  has_many :dish_types
   
 end
