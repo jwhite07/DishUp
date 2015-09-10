@@ -1,5 +1,5 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  cache key: "restaurant", expires_in: 12.hours
+ # cache key: "restaurant", expires_in: 12.hours
   attributes :id, :name, :premium_level, :menu_id
    
   

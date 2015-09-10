@@ -26,6 +26,8 @@ class Dish < ActiveRecord::Base
     greater_than_or_equal_to: 0, 
     less_than_or_equal_to: 5
   }
+  
+  
   def lead_dishpic_url
     if dishpics.count > 0
       dishpics.first.url
