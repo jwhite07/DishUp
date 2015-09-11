@@ -5,7 +5,9 @@
 			<div id="hero_text" class="parallax_layer layer_back" >
 				<h2><%= @contents["pane1.headline.1"].contents.html_safe %><br> <%= @contents["pane1.headline.2"].contents.html_safe %><br> <%= @contents["pane1.headline.3"].contents.html_safe %></h2>
 				<h3><%= @contents["pane1.tagline"].contents.html_safe %></h3>
+				<% if !@contents["pane1.downloadurl"].disabled %>
 				<a href="<%= @contents["pane1.downloadurl"].contents.html_safe %>" class="download">DOWNLOAD</a>
+				<% end %>
 				<a href="<%= @contents["pane1.videourl"].contents.html_safe %>" id="watch" ><span class="fa-play fa"> </span>WATCH</a>
 			</div>
 			<div id="hero_hand" class="parallax_layer layer_front" data-bottom-bottom="bottom: 0vh" data-6p-top-bottom="bottom: 94vh">
@@ -36,8 +38,10 @@
 		<div id="bgimagepanel">
 			<div class="content " >
 				<p><%= @contents["pane4.para.1"].contents.html_safe %></p>
+				<% if !@contents["pane4.downloadlink"].disabled %>
 				<a href="<%= @contents["pane4.downloadlink"].contents.html_safe %>" class="download_link">DOWNLOAD</a>
 				
+				<% end %>
 				
 			</div>
 		</div>
@@ -74,7 +78,7 @@
 	        $('form button').bind('click', function ( event ) {
 	            if ( event ) event.preventDefault();
 	            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
-	            if ( validate_input($form) ) { register($form); }
+	            register($form); 
 	        });
 	    }
 	});
