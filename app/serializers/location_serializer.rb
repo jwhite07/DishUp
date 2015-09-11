@@ -1,5 +1,5 @@
 class LocationSerializer < ActiveModel::Serializer
-  #cache key: "location", expires_in: 1.hours, except: [:distance, :menu_id]
+  cache key: "location", expires_in: 1.hours, except: [:distance, :menu_id]
   attributes :id, :name, :address, :city, :state, :postal_code, :logo, :phone_number, :website, :distance, :restaurant, :menu_id
    
   

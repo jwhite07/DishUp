@@ -1,5 +1,5 @@
 class DishPreviewSerializer < ActiveModel::Serializer
-  #cache key: "dishpreview", expires_in: 1.hours, except: [:special_event_id, :location_id]
+  cache key: "dishpreview", expires_in: 1.hours, except: [:special_event_id, :location_id]
   attributes :id, :name, :price, :rating, :description, :updated_at, :user_rating, :lead_dishpic_url, :special_event_id, :location_id
   
   def user_rating
