@@ -71,7 +71,7 @@
 	    var $form = $('form');
 
 	    if ( $form.length > 0 ) {
-	        $('form input[type="button"]').bind('click', function ( event ) {
+	        $('form button').bind('click', function ( event ) {
 	            if ( event ) event.preventDefault();
 	            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
 	            if ( validate_input($form) ) { register($form); }
