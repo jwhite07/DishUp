@@ -3,10 +3,10 @@
 		<div class="content ">
 			<!-- data-10p-top-top="top: 10vh" data-6p-top-bottom="top: -94vh" -->
 			<div id="hero_text" class="parallax_layer layer_back" >
-				<h2><%= @contents["pane1.headline.1"].contents %><br> <%= @contents["pane1.headline.2"].contents %><br> <%= @contents["pane1.headline.3"].contents %></h2>
-				<h3><%= @contents["pane1.tagline"].contents %></h3>
-				<a href="<%= @contents["pane1.downloadurl"].contents %>" class="download">DOWNLOAD</a>
-				<a href="<%= @contents["pane1.videourl"].contents %>" id="watch" ><span class="fa-play fa"> </span>WATCH</a>
+				<h2><%= @contents["pane1.headline.1"].contents.html_safe %><br> <%= @contents["pane1.headline.2"].contents.html_safe %><br> <%= @contents["pane1.headline.3"].contents.html_safe %></h2>
+				<h3><%= @contents["pane1.tagline"].contents.html_safe %></h3>
+				<a href="<%= @contents["pane1.downloadurl"].contents.html_safe %>" class="download">DOWNLOAD</a>
+				<a href="<%= @contents["pane1.videourl"].contents.html_safe %>" id="watch" ><span class="fa-play fa"> </span>WATCH</a>
 			</div>
 			<div id="hero_hand" class="parallax_layer layer_front" data-bottom-bottom="bottom: 0vh" data-6p-top-bottom="bottom: 94vh">
 				<%= image_tag("dishup_hand_hero.png", class: "heroimage")%>
@@ -19,7 +19,7 @@
 			
 			<div  class="parallax_layer layer_front">
 				<%= image_tag("du_dishpic_screen.png", class: "heroimage")%>
-				<p><%= @contents["pane2.para"].contents %></p>
+				<p><%= @contents["pane2.para"].contents.html_safe %></p>
 			</div>
 		</div>
 	</div>
@@ -28,15 +28,15 @@
 			
 			<div class="parallax_layer layer_front">
 				<%= image_tag("du_stacked_screens.png", class: "heroimage")%>
-				<p><%= @contents["pane3.para"].contents %></p>
+				<p><%= @contents["pane3.para"].contents.html_safe %></p>
 			</div>
 		</div>
 	</div>
 	<div id="getdishup" class="parallax_group" data-bottom-top="top: 94vh" data-6p-top-top="top: 0vh">
 		<div id="bgimagepanel">
 			<div class="content " >
-				<p><%= @contents["pane4.para.1"].contents %></p>
-				<a href="<%= @contents["pane4.downloadlink"].contents %>" class="download_link">DOWNLOAD</a>
+				<p><%= @contents["pane4.para.1"].contents.html_safe %></p>
+				<a href="<%= @contents["pane4.downloadlink"].contents.html_safe %>" class="download_link">DOWNLOAD</a>
 				
 				
 			</div>
@@ -44,7 +44,7 @@
 		<div id="email_form">
 			<div class="content">
 				
-				<p><%= @contents["pane4.para.2"].contents %></p>
+				<p><%= @contents["pane4.para.2"].contents.html_safe %></p>
 				<div class="input-group">
 			      <input type="text" class="form-control" placeholder="email">
 			      <span class="input-group-btn">
@@ -56,8 +56,8 @@
         <footer>
 			<div class="content">
 		        
-		          <p><%= @contents["footer.copyright"].contents %></p>
-				  <p><%= @contents["footer.address"].contents %></p>
+		          <p><%= @contents["footer.copyright"].contents.html_safe %></p>
+				  <p><%= @contents["footer.address"].contents.html_safe %></p>
 			</div>
          
         </footer>
