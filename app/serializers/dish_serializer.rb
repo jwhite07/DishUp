@@ -14,16 +14,20 @@ class DishSerializer < ActiveModel::Serializer
   def location
     if @options[:serializer_params][:location_id]
       location = object.restaurant.locations.where(location_id: @options[:serializer_params][:location_id] ).first
-      
+      Rails.logger.debug "Location by id: #{location}"
       if location
         location
       else
         object.restaurant.locations.first
       end
     elsif @options[:serializer_params][:latitude] && @options[:serializer_params][:longitude]
-      object.restaurant.locations.near(@options[:serializer_params][:latitude], @options[:serializer_params][:longitude])
+      latitude = @options[:serializer_params][:latitude]
+      longitude = @options[:serializer_params][:longitude]
+      object.restaurant.locations.near([latitude, longitude], 99999, order: "distance").first
+      
     else
-      object.restaurant.locations.first
+      location = object.restaurant.locations.first
+      Rails.logger.debug "Location by default: #{location}"
     end
   end
 end
