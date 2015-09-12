@@ -5,10 +5,9 @@ class Api::V1::DishesController < ApplicationController
     if params[:dish_type_id]
       dt = DishType.find(params[:dish_type_id])
       if dt.special_event
-        logger.debug "dt.specialevent start"
-        dishes = dt.special_event.dishes.includes(:dishpics, :dish_ratings)
-        logger.debug "dishes count: #{dishes.count}"
-        logger.debug "dt.special_event.id: #{dt.special_event.id}"
+        
+        dishes = dt.special_event.dishes.uniq.includes(:dishpics, :dish_ratings)
+        
         serializer_params[:special_event_id] = dt.special_event.id
       else
         dishes = DishType.find(params[:dish_type_id]).dishes.includes(:dishpics, :dish_ratings)
