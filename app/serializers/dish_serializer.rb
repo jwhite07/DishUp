@@ -13,7 +13,7 @@ class DishSerializer < ActiveModel::Serializer
   end
   def location
     if @options[:serializer_params][:location_id]
-      location = object.restaurant.locations.where(location_id: @options[:serializer_params][:location_id] ).first
+      location = object.restaurant.locations.where(id: @options[:serializer_params][:location_id] ).first
       Rails.logger.debug "Location by id: #{location}"
       if location
         location
