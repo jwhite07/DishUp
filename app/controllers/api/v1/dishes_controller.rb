@@ -6,7 +6,7 @@ class Api::V1::DishesController < ApplicationController
       dt = DishType.find(params[:dish_type_id])
       if dt.special_event
         
-        dishes = dt.special_event.dishes.uniq.includes(:dishpics, :dish_ratings)
+        dishes = dt.special_event.dishes.includes(:dishpics, :dish_ratings).uniq
         
         serializer_params[:special_event_id] = dt.special_event.id
       else
