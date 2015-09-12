@@ -1,5 +1,5 @@
 ActiveAdmin.register WebContent do
-  permit_params :identifier, :contents, :html_class, :html_id
+  permit_params :identifier, :contents, :html_class, :html_id, :disabled
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
