@@ -28,6 +28,6 @@ class Api::V1::DishesController < ApplicationController
   end
   private
   def serializer_params
-    {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"], special_event_id: nil}
+    {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"], special_event_id: nil, location_id: params["location_id"]}
   end
 end
