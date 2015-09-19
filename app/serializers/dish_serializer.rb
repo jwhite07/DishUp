@@ -27,7 +27,7 @@ class DishSerializer < ActiveModel::Serializer
       
     else
       location = object.restaurant.locations.first
-      Rails.logger.debug "Location by default: #{location}"
+   
     end
   end
 end
