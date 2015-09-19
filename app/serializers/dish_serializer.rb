@@ -1,6 +1,6 @@
 class DishSerializer < ActiveModel::Serializer
   #cache key: "dish", expires_in: 1.hours, except: [:location]
-  attributes :id, :name, :price, :rating, :description,  :updated_at, :user_rating, :location
+  attributes :id, :name, :price, :rating, :description,  :updated_at, :user_rating, :location, :restaurant_name
   has_many :dishpics, serializer: DishpicPreviewSerializer
   
   def user_rating
@@ -10,6 +10,9 @@ class DishSerializer < ActiveModel::Serializer
     else
       return user_rating.rating
     end
+  end
+  def restaurant_name
+    object.restaurant.name
   end
   def location
     if @options[:serializer_params][:location_id]
