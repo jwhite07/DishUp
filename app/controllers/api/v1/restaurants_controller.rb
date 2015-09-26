@@ -10,7 +10,7 @@ class Api::V1::RestaurantsController < ApplicationController
     end
     logger.debug "restaurants: #{restaurants.count}"
     if params["latitude"] && params["longitude"] 
-      respond_with restaurants.near([params["latitude"], params["longitude"]], 999999, order: 'distance'), serializer_params: serializer_params
+      respond_with restaurants.near([params["latitude"], params["longitude"]], 50, order: 'distance'), serializer_params: serializer_params
     else
       respond_with restaurants, serializer_params: serializer_params
     end

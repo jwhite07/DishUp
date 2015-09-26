@@ -8,7 +8,7 @@ class Api::V1::LocationsController < ApplicationController
       if params[:special_event_id]
         locations = SpecialEvent.find(params[:special_event_id]).locations.only_with_dishes.near([params["latitude"], params["longitude"]], 999999, order: 'distance')
       else
-        locations = Location.preload(:restaurant).only_with_dishes.near([params["latitude"], params["longitude"]], 999999, order: 'distance')
+        locations = Location.preload(:restaurant).only_with_dishes.near([params["latitude"], params["longitude"]], 50, order: 'distance')
       end
       
     else
