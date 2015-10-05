@@ -10704,6 +10704,11 @@ footer {
   height: 15vh;
   background: #474747;
 }
+@media (max-width: 991px) {
+  body {
+    font-size: 1.25em;
+  }
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

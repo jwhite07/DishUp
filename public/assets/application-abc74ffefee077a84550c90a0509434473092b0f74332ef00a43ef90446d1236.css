@@ -10603,14 +10603,13 @@ body {
 #howitworks p {
   position: absolute;
   left: 5%;
-  top: 20%;
-  right: 55%;
+  right: 50%;
 }
-#howitworks p .first {
-  top: 15%;
+#howitworks .p1 {
+  top: 10%;
 }
-#howitworks p .last {
-  bottom: 15%;
+#howitworks .p2 {
+  bottom: 10%;
 }
 #getdishup {
   top: 300vh;
@@ -10618,7 +10617,7 @@ body {
 }
 #bgimagepanel {
   background: url(/assets/du_iphone_table-d9d87d44b87b3f95b52317f09200f65212c412eb9717a6ee4ae41bfa969ad2ef.jpg) no-repeat center top #120903;
-  height: 59vh;
+  height: 49vh;
   text-align: center;
 }
 #bgimagepanel:before,
@@ -10651,10 +10650,10 @@ body {
   float: none;
 }
 #bgimagepanel .content {
-  height: 59vh;
+  height: 49vh;
 }
 #email_form {
-  height: 20vh;
+  height: 30vh;
   width: 100%;
   background: #fff;
   text-align: center;
@@ -10697,13 +10696,18 @@ body {
 }
 #mc_embed_signup .mc-field-group input {
   display: block;
-  width: 90%;
+  width: 80%;
   padding: 8px 0;
   text-indent: 2%;
 }
 footer {
   height: 15vh;
   background: #474747;
+}
+@media (max-width 991px) {
+  #hero_hand {
+    width: 33%;
+  }
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

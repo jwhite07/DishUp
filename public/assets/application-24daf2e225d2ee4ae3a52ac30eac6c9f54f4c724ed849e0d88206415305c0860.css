@@ -10603,14 +10603,13 @@ body {
 #howitworks p {
   position: absolute;
   left: 5%;
-  top: 20%;
-  right: 55%;
+  right: 50%;
 }
-#howitworks p .p1 {
-  top: 15%;
+#howitworks .p1 {
+  top: 10%;
 }
-#howitworks p .p2 {
-  bottom: 15%;
+#howitworks .p2 {
+  bottom: 10%;
 }
 #getdishup {
   top: 300vh;
@@ -10702,8 +10701,13 @@ body {
   text-indent: 2%;
 }
 footer {
-  height: 11vh;
+  height: 15vh;
   background: #474747;
+}
+@media (max-width 991px) {
+  .heroimage {
+    width: 33%;
+  }
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

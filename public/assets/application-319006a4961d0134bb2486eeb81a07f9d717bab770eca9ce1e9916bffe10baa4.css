@@ -10603,14 +10603,13 @@ body {
 #howitworks p {
   position: absolute;
   left: 5%;
-  top: 20%;
-  right: 55%;
+  right: 50%;
 }
-#howitworks p .first {
-  top: 15%;
+#howitworks .p1 {
+  top: 10%;
 }
-#howitworks p .last {
-  bottom: 15%;
+#howitworks .p2 {
+  bottom: 10%;
 }
 #getdishup {
   top: 300vh;
@@ -10702,8 +10701,38 @@ body {
   text-indent: 2%;
 }
 footer {
-  height: 11vh;
+  height: 15vh;
   background: #474747;
+}
+@media (max-width: 991px) {
+  body {
+    font-size: 1.5em;
+  }
+  #section1 h2 {
+    font-size: 3em;
+  }
+  #hero_hand {
+    width: 60%;
+  }
+  #hero_hand img {
+    width: 100%;
+  }
+  #about img {
+    width: 60%;
+    bottom: -30px;
+    left: -30%;
+  }
+  #howitworks p {
+    right: 33%;
+  }
+  #howitworks img {
+    width: 60%;
+    right: -30%;
+    bottom: -30px;
+  }
+  #bgimagepanel p {
+    font-size: 1.33em;
+  }
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
