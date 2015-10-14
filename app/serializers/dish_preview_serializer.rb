@@ -1,6 +1,6 @@
 class DishPreviewSerializer < ActiveModel::Serializer
   #cache key: "dishpreview", expires_in: 1.hours, except: [:special_event_id, :location_id]
-  attributes :id, :name, :price, :rating, :description, :updated_at, :user_rating, :lead_dishpic_url, :special_event_id, :location_id, :restaurant_name
+  attributes :id, :name, :price, :rating, :description, :updated_at, :user_rating, :lead_dishpic_url, :special_event_id, :location_id, :restaurant_name, :distance
   
   def user_rating
     user_rating = DishRating.where(user_id: @current_user).first if @current_user
@@ -42,6 +42,13 @@ class DishPreviewSerializer < ActiveModel::Serializer
       object.restaurant.locations.near(@options[:serializer_params][:latitude], @options[:serializer_params][:longitude])
     else
       object.restaurant.locations.first
+    end
+  end
+  def distance
+    if object.respond_to? :distance
+      return object.distance
+    else
+      return ""
     end
   end
   

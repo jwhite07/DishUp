@@ -12,6 +12,11 @@ class Api::V1::DishesController < ApplicationController
       else
         dishes = DishType.find(params[:dish_type_id]).dishes.includes(:dishpics, :dish_ratings)
       end
+      if params["latitude"] && params["longitude"]
+        dishes = dishes.near([params["latitude"], params["longitude"]], distance)
+      elsif params["location"]
+        dishes = dishes.near(params["location"], distance)
+      end
     elsif params[:restaurant_id]
       dishes =  Restaurant.find(params[:restaurant_id]).dishes.includes(:dishpics, :dish_ratings)
     elsif params[:menu_id]
@@ -27,7 +32,14 @@ class Api::V1::DishesController < ApplicationController
     respond_with Dish.find(params[:id]), serializer_params: serializer_params
   end
   private
-  def serializer_params
-    {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"], special_event_id: nil, location_id: params["location_id"]}
-  end
+    def serializer_params
+      {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"], special_event_id: nil, location_id: params["location_id"]}
+    end
+    def distance
+      if params["distance"]
+        params["distance"]
+      else
+        50
+      end
+    end
 end

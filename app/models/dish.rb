@@ -2,6 +2,7 @@ class Dish < ActiveRecord::Base
   default_scope {order("rating DESC")}
   after_save :add_to_default_menu
   belongs_to :restaurant, :counter_cache => :dishes_count
+  has_many :locations, :through => :restaurant
   
   has_many :dishes_dish_types
   has_many :dish_types, :through => :dishes_dish_types
@@ -27,7 +28,10 @@ class Dish < ActiveRecord::Base
     less_than_or_equal_to: 5
   }
   
-  
+  scope :near, -> (location, distance) {
+
+    joins(:locations).merge(Location.near(location, distance, :select=> "dishes.*"))
+   }
   def lead_dishpic_url
     if dishpics.count > 0
       dishpics.first.url

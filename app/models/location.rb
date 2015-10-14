@@ -3,6 +3,7 @@ class Location < ActiveRecord::Base
   geocoded_by :full_address
   after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
   belongs_to :restaurant
+  has_many :dishes, :through => :restaurant
   has_and_belongs_to_many :special_events
   validates :name, :address, :city, :state, presence: true
   def full_address
