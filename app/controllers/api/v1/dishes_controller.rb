@@ -14,8 +14,8 @@ class Api::V1::DishesController < ApplicationController
       end
       if params["latitude"] && params["longitude"]
         dishes = dishes.near([params["latitude"], params["longitude"]], distance)
-      elsif params["location"]
-        dishes = dishes.near(params["location"], distance)
+      elsif params["address"]
+        dishes = dishes.near(params["address"], distance)
       end
     elsif params[:restaurant_id]
       dishes =  Restaurant.find(params[:restaurant_id]).dishes.includes(:dishpics, :dish_ratings)

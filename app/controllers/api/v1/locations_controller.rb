@@ -8,9 +8,15 @@ class Api::V1::LocationsController < ApplicationController
       if params[:special_event_id]
         locations = SpecialEvent.find(params[:special_event_id]).locations.only_with_dishes.near([params["latitude"], params["longitude"]], 999999, order: 'distance')
       else
-        locations = Location.preload(:restaurant).only_with_dishes.near([params["latitude"], params["longitude"]], 50, order: 'distance')
+        locations = Location.preload(:restaurant).only_with_dishes.near([params["latitude"], params["longitude"]], distance, order: 'distance')
       end
       
+    elsif params["address"]
+      if params[:special_event_id]
+        locations = SpecialEvent.find(params[:special_event_id]).locations.only_with_dishes.near(params["location"], 999999, order: 'distance')
+      else
+        locations = Location.preload(:restaurant).only_with_dishes.near(params["address"], distance, order: 'distance')
+      end
     else
       if params[:special_event_id]
         se = SpecialEvent.find(params[:special_event_id])
@@ -29,5 +35,12 @@ class Api::V1::LocationsController < ApplicationController
   private
     def serializer_params
       {special_event_id: params[:special_event_id], latitude: params["latitude"], longitude: params["longitude"]}
+    end
+    def distance
+      if params["distance"]
+        params["distance"]
+      else
+        50
+      end
     end
 end
