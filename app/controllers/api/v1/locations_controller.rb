@@ -11,11 +11,11 @@ class Api::V1::LocationsController < ApplicationController
         locations = Location.preload(:restaurant).only_with_dishes.near([params["latitude"], params["longitude"]], distance, order: 'distance')
       end
       
-    elsif params["address"]
+    elsif coordinates = Geocoder.coordinates(params["address"])
       if params[:special_event_id]
-        locations = SpecialEvent.find(params[:special_event_id]).locations.only_with_dishes.near(params["location"], 999999, order: 'distance')
+        locations = SpecialEvent.find(params[:special_event_id]).locations.only_with_dishes.near(coordinates, 999999, order: 'distance')
       else
-        locations = Location.preload(:restaurant).only_with_dishes.near(params["address"], distance, order: 'distance')
+        locations = Location.preload(:restaurant).only_with_dishes.near(coordinates, distance, order: 'distance')
       end
     else
       if params[:special_event_id]

@@ -30,7 +30,7 @@ class Dish < ActiveRecord::Base
   
   scope :near, -> (location, distance) {
 
-    joins(:locations).merge(Location.near(location, distance, :select=> "dishes.*"))
+    joins(:locations).merge(Location.near(location, distance, :select=> " dishes.*"))
    }
   def lead_dishpic_url
     if dishpics.count > 0

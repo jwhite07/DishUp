@@ -20,6 +20,7 @@ Geocoder.configure(
   # :distances => :linear    # :spherical or :linear
   # 
 )
+#Geocoder.configure(:timeout => 5000)
 if Rails.env.test?
 Geocoder.configure(:lookup => :test)
 

@@ -14,17 +14,20 @@ class Api::V1::DishesController < ApplicationController
       end
       if params["latitude"] && params["longitude"]
         dishes = dishes.near([params["latitude"], params["longitude"]], distance)
-      elsif params["address"]
-        dishes = dishes.near(params["address"], distance)
+      elsif coordinates = Geocoder.coordinates(params["address"])
+        
+        dishes = dishes.near(coordinates, distance)
       end
     elsif params[:restaurant_id]
       dishes =  Restaurant.find(params[:restaurant_id]).dishes.includes(:dishpics, :dish_ratings)
     elsif params[:menu_id]
       dishes =  Menu.find(params[:menu_id]).dishes.includes(:dishpics, :dish_ratings)
     else
+      
       logger.debug "Serialzer Params: #{serializer_params}"
       dishes = Dish.includes(:dishpics, :dish_ratings).all
     end
+    dishes = dishes.to_a.uniq {|d| d.id}
     #puts serializer_params
     respond_with dishes, each_serializer: DishPreviewSerializer, serializer_params: serializer_params
   end
