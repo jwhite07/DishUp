@@ -7,6 +7,6 @@ class Location < ActiveRecord::Base
   has_and_belongs_to_many :special_events
   validates :name, :address, :city, :state, presence: true
   def full_address
-    address + city + state + postal_code
+    "#{address}  #{city}  #{state}  #{postal_code}"
   end
 end
