@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150911190535) do
+ActiveRecord::Schema.define(version: 20151030203953) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -214,6 +214,30 @@ ActiveRecord::Schema.define(version: 20150911190535) do
 
   add_index "menus", ["restaurant_id"], name: "index_menus_on_restaurant_id"
   add_index "menus", ["special_event_id"], name: "index_menus_on_special_event_id"
+
+  create_table "promos", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "priority"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "img"
+    t.text     "message"
+    t.string   "color"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.integer  "radius"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "restaurant_id"
+    t.integer  "special_event_id"
+    t.string   "url"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+  end
+
+  add_index "promos", ["restaurant_id"], name: "index_promos_on_restaurant_id"
+  add_index "promos", ["special_event_id"], name: "index_promos_on_special_event_id"
 
   create_table "ratings", force: :cascade do |t|
     t.integer  "rating"
