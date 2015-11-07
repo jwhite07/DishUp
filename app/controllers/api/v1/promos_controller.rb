@@ -5,7 +5,7 @@ class Api::V1::PromosController < ApplicationController
       promos = Promo.
                 only_active.
                 near( [params[:latitude], params[:longitude]], 999999).
-                where("distance < radius").
+                #where("distance < radius").
                 reorder("priority DESC, distance ASC").
                 first
     else
