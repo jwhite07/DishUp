@@ -5,5 +5,6 @@ class SpecialEvent < ActiveRecord::Base
   has_many :menus
   has_many :dishes, :through => :menus
   has_many :dish_types
+  has_many :promos
   
 end

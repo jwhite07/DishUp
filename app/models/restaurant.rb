@@ -13,6 +13,7 @@ class Restaurant < ActiveRecord::Base
   accepts_nested_attributes_for :locations
 
   has_many :special_events, :through => :menus
+  has_many :promos
   
   validates :name,  presence: true
   
