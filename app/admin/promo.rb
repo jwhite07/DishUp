@@ -1,5 +1,5 @@
 ActiveAdmin.register Promo do
-  permit_params :name, :action, :priority, :start_date, :end_date, :img, :message, :title_color, :body_color, :longitude, :latitude, :radius, :restaurant_id, :special_event_id, :dish_type_id, :url, :address, :city, :state
+  permit_params :name, :action, :priority, :start_date, :end_date, :img, :message, :title_color, :body_color, :longitude, :latitude, :radius, :restaurant_id, :special_event_id, :dish_type_id, :link_url, :address, :city, :state
   
   form do |f|
     f.inputs "Add/Edit Promo" do
@@ -15,7 +15,7 @@ ActiveAdmin.register Promo do
       f.input :restaurant, as: :select, :collection => Restaurant.all
       f.input :dish_type, as: :select, :collection => DishType.all
       f.input :special_event, as: :select, :collection => SpecialEvent.all
-      
+      f.input :link_url
       
       f.input :address
       f.input :city
