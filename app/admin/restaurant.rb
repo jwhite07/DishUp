@@ -44,6 +44,7 @@ ActiveAdmin.register Restaurant do
       column :country
       column :postal_code
       column :website
+      column :logo
       column :phone_number
     end
     
@@ -67,6 +68,7 @@ ActiveAdmin.register Restaurant do
         loc.input :country
         loc.input :postal_code
         loc.input :website
+        loc.input :logo
         loc.input :phone_number
       end
     end
