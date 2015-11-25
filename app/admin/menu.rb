@@ -1,7 +1,7 @@
 ActiveAdmin.register Menu do
   #belongs_to :restaurant
   #navigation_menu :restaurant
-  permit_params :name, :restaurant_id, :default
+  permit_params :name, :restaurant_id, :default, :special_event_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
