@@ -74,6 +74,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
   
+  
 end
 #api gems
 gem 'active_model_serializers', '~> 0.10.0.rc2'
@@ -85,3 +86,4 @@ gem "twitter-bootstrap-rails"
 gem 'newrelic_rpm'
 #gem 'skylight'
 gem 'dalli'
+gem 'rack-timeout'
