@@ -2,6 +2,7 @@ class Api::V1::DishesController < ApplicationController
  # params :latitude, :longitude
   respond_to :json
   def index
+    
     if params[:dish_type_id]
       dt = DishType.find(params[:dish_type_id])
       if dt.special_event
@@ -27,7 +28,12 @@ class Api::V1::DishesController < ApplicationController
       logger.debug "Serialzer Params: #{serializer_params}"
       dishes = Dish.includes(:dishpics, :dish_ratings).all
     end
-    dishes = dishes.to_a.uniq {|d| d.id}
+    
+    dishes = dishes.to_a
+    if params[:initialDishId]
+      dishes = dishes.unshift(Dish.find(params[:initialDishId]))
+    end
+    dishes = dishes.uniq {|d| d.id}
     #puts serializer_params
     respond_with dishes, each_serializer: DishPreviewSerializer, serializer_params: serializer_params
   end
