@@ -42,7 +42,7 @@ class Api::V1::DishesController < ApplicationController
   end
   private
     def serializer_params
-      {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"], special_event_id: nil, location_id: params["location_id"]}
+      {current_user: current_user, latitude: params["latitude"], longitude: params["longitude"], special_event_id: nil, location_id: params["location_id"], menu_id: params[:menu_id], dish_type_id: params[:dish_type_id]}
     end
     def distance
       if params["distance"]
