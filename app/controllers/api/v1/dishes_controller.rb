@@ -7,11 +7,11 @@ class Api::V1::DishesController < ApplicationController
       dt = DishType.find(params[:dish_type_id])
       if dt.special_event
         
-        dishes = dt.special_event.dishes.includes(:dishpics, :dish_ratings).uniq
+        dishes = dt.special_event.dishes.includes(:dishpics, :dish_ratings, :restaurant, :locations).uniq
         
         serializer_params[:special_event_id] = dt.special_event.id
       else
-        dishes = DishType.find(params[:dish_type_id]).dishes.includes(:dishpics, :dish_ratings)
+        dishes = DishType.find(params[:dish_type_id]).dishes.includes(:dishpics, :dish_ratings, :restaurant, :locations)
       end
       if params["latitude"] && params["longitude"]
         dishes = dishes.near([params["latitude"], params["longitude"]], distance)
@@ -20,13 +20,13 @@ class Api::V1::DishesController < ApplicationController
         dishes = dishes.near(coordinates, distance)
       end
     elsif params[:restaurant_id]
-      dishes =  Restaurant.find(params[:restaurant_id]).dishes.includes(:dishpics, :dish_ratings)
+      dishes =  Restaurant.find(params[:restaurant_id]).dishes.includes(:dishpics, :dish_ratings, :restaurant, :locations)
     elsif params[:menu_id]
-      dishes =  Menu.find(params[:menu_id]).dishes.includes(:dishpics, :dish_ratings)
+      dishes =  Menu.find(params[:menu_id]).dishes.includes(:dishpics, :dish_ratings, :restaurant, :locations)
     else
       
       logger.debug "Serialzer Params: #{serializer_params}"
-      dishes = Dish.includes(:dishpics, :dish_ratings).all
+      dishes = Dish.includes(:dishpics, :dish_ratings, :restaurant, :locations).all
     end
     
     dishes = dishes.to_a

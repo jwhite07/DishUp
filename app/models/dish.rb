@@ -33,7 +33,7 @@ class Dish < ActiveRecord::Base
     joins(:locations).merge(Location.near(location, distance, :select=> " dishes.*"))
    }
   def lead_dishpic_url
-    if dishpics.count > 0
+    if dishpics.first
       dishpics.first.url
     else
       nil
