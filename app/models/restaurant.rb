@@ -4,6 +4,7 @@ class Restaurant < ActiveRecord::Base
   after_save :add_default_menu
   has_many :menus
   accepts_nested_attributes_for :menus
+  has_one :default_menu, -> {where(default: true)}, class_name: "Menu"
   has_many :menu_sections
   accepts_nested_attributes_for :menu_sections
   
@@ -25,9 +26,7 @@ class Restaurant < ActiveRecord::Base
       menu.save!
     end
   end
-  def default_menu
-    Menu.where(restaurant_id: self.id, default: true).first
-  end
+
   # def self.import_from_json_file(filename)
 #     file = File.read(File.join(Rails.root, filename))
 #     restaurants = JSON.parse(file)
