@@ -8,7 +8,8 @@ class Api::V1::SessionsController < ApplicationController
     ex_token = params[:session][:ex_token]
     if  user_email.present? 
       user = User.find_by(email: user_email)
-    elsif ex_user_id.present?
+    end
+    if ex_user_id.present? && user == nil
       user = User.find_by(ex_user_id: ex_user_id)
     end
     if user == nil
